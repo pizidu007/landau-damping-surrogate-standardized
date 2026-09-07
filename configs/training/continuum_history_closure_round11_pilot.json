@@ -1,0 +1,32 @@
+{
+  "dataset_root": "/rydata/duxinxu/landau-damping-surrogate-standardized/continuum_v1",
+  "cache_dir": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/cache",
+  "parent_checkpoint": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_baseline/seed1/best.pt",
+  "maximum_mode": 16,
+  "dt": 0.02,
+  "width": 128,
+  "layers": 4,
+  "include_alpha": false,
+  "history_span": 2.0,
+  "supervised_epochs": 8,
+  "samples_per_case": 256,
+  "supervised_batch_size": 512,
+  "supervised_lr": 0.0002,
+  "rollout_batch_size": 8,
+  "rollout_lr": 0.00001,
+  "burn_in": 5.0,
+  "curriculum": [
+    {"horizon": 0.2, "epochs": 1},
+    {"horizon": 1.0, "epochs": 1},
+    {"horizon": 2.0, "epochs": 1}
+  ],
+  "loss_weights": {
+    "state": 1.0,
+    "complex_field": 1.0,
+    "log_energy": 0.1,
+    "supervised": 0.02,
+    "conservation": 1.0,
+    "positivity": 10.0
+  },
+  "protocol": "Pilot settings; dt and spectral cutoff require preceding oracle gate"
+}

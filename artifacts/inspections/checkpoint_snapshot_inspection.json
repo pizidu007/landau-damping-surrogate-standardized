@@ -1,0 +1,197 @@
+{
+  "stage": "stage8d1d_final_baseline",
+  "version": "stage8d1d_final_fno_v1",
+  "selected_candidate": "modes_v32",
+  "selection_policy": {
+    "primary": "minimum validation case-macro relative L2",
+    "tie_relative_tolerance": 0.005,
+    "tie_breaker": "minimum validation mean_delta relative L2, then fixed complexity priority",
+    "test_used_for_selection": false
+  },
+  "source_checkpoint": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8d1_baselines/stage8d1d_ablation_formal_v1/modes_v32/best.pt",
+  "source_checkpoint_sha256": "4bfec002d3a03aedfaf24b88d94c37d411947650776a341c2b13d5374c3e45e4",
+  "model_config": {
+    "variant": "dual_head",
+    "width": 32,
+    "layers": 4,
+    "modes_x": 16,
+    "modes_v": 32,
+    "v_padding": 16,
+    "condition_channels": 16,
+    "condition_hidden_dim": 128,
+    "condition_hidden_layers": 2,
+    "condition_mode": "phase_aware",
+    "time_harmonics": 8,
+    "phase_harmonics": 8,
+    "x_coordinate_harmonics": 2
+  },
+  "model_contract": {
+    "variant": "dual_head",
+    "field_shape": [
+      128,
+      193
+    ],
+    "width": 32,
+    "layers": 4,
+    "modes_x": 16,
+    "modes_v": 32,
+    "v_padding": 16,
+    "condition_channels": 16,
+    "condition_mode": "phase_aware",
+    "time_harmonics": 8,
+    "phase_harmonics": 8,
+    "x_coordinate_harmonics": 2,
+    "coordinate_channels": 6
+  },
+  "loss_floors": {
+    "relative_mse": 0.11400800049304963,
+    "mode1_energy": 0.047658539935946466,
+    "resonance_mse": 0.032496605813503276,
+    "mean_delta_mse": 0.012661931104958057
+  },
+  "loss_weights": {
+    "global_mse": 1.0,
+    "relative": 0.2,
+    "mode1": 0.1,
+    "resonance": 0.05,
+    "mean_delta": 0.1
+  },
+  "source_training_config": {
+    "cache": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8d1_baselines/stage8d1a_cache_x128_v193_v1/landau_deltaf_cache_x128_v193_v1.h5",
+    "stage8d1a_case_metrics": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8d1_baselines/stage8d1a_pod_formal_v1/case_metrics.csv",
+    "output_dir": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8d1_baselines/stage8d1d_ablation_formal_v1/modes_v32",
+    "candidate_name": "modes_v32",
+    "variant": "dual_head",
+    "condition_mode": "phase_aware",
+    "mode": "formal",
+    "device": "cuda:0",
+    "threads": 8,
+    "seed": 20260723,
+    "epochs": 30,
+    "batch_size": 32,
+    "learning_rate": 0.0005,
+    "weight_decay": 1e-05,
+    "width": 32,
+    "layers": 4,
+    "modes_x": 16,
+    "modes_v": 32,
+    "v_padding": 16,
+    "condition_channels": 16,
+    "condition_hidden_dim": 128,
+    "condition_hidden_layers": 2,
+    "time_harmonics": 8,
+    "phase_harmonics": 8,
+    "x_coordinate_harmonics": 2,
+    "lambda_relative": 0.2,
+    "lambda_mode1": 0.1,
+    "lambda_resonance": 0.05,
+    "lambda_mean_delta": 0.1,
+    "floor_quantile": 0.1,
+    "alpha_weight_gamma": 0.0,
+    "alpha_weight_reference": 0.025,
+    "alpha_weight_min": 0.75,
+    "alpha_weight_max": 2.5,
+    "amp": "bf16",
+    "gradient_clip": 5.0
+  },
+  "best_epoch": 30,
+  "validation_metrics": {
+    "variant": "dual_head",
+    "split_group": "all_validation",
+    "case_count": "14",
+    "relative_l2": "0.136608746089282",
+    "case_macro_mean_relative_l2": "0.19629603239042595",
+    "case_median_relative_l2": "0.15477775725561826",
+    "case_max_relative_l2": "0.5092948385580696",
+    "case_min_relative_l2": "0.10493560258746018",
+    "case_win_rate_vs_idw": "0.7142857142857143",
+    "idw_case_macro_mean_relative_l2": "0.2308385474323795",
+    "normalized_rmse": "0.13093037532203256",
+    "normalized_mae": "0.05802682727459312",
+    "resonance_relative_l2": "0.31328122364527006",
+    "mean_delta_relative_l2": "0.2686154267269609",
+    "nonzero_relative_l2": "0.1332057139638669",
+    "mode0_relative_l2": "0.26861542400672794",
+    "mode1_relative_l2": "0.05238028203080907",
+    "candidate": "modes_v32",
+    "condition_mode": "phase_aware",
+    "alpha_weight_gamma": "0.0"
+  },
+  "test_metrics": {
+    "variant": "dual_head",
+    "split_group": "all_test",
+    "case_count": "26",
+    "relative_l2": "0.1320824710141751",
+    "case_macro_mean_relative_l2": "0.20597235085890817",
+    "case_median_relative_l2": "0.14570135660488753",
+    "case_max_relative_l2": "0.49180422044798033",
+    "case_min_relative_l2": "0.09630271985882344",
+    "case_win_rate_vs_idw": "0.7307692307692307",
+    "idw_case_macro_mean_relative_l2": "0.23911986492110401",
+    "normalized_rmse": "0.13250542555808578",
+    "normalized_mae": "0.059411247473729625",
+    "resonance_relative_l2": "0.3005037949986888",
+    "mean_delta_relative_l2": "0.2520719887415042",
+    "nonzero_relative_l2": "0.12943066276113957",
+    "mode0_relative_l2": "0.25207198281938337",
+    "mode1_relative_l2": "0.05214745460558845",
+    "candidate": "modes_v32",
+    "condition_mode": "phase_aware",
+    "alpha_weight_gamma": "0.0"
+  },
+  "cache_contract": {
+    "cache_path": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8d1_baselines/stage8d1a_cache_x128_v193_v1/landau_deltaf_cache_x128_v193_v1.h5",
+    "cache_sha256": "84fd51e09e3898555a690aef3df57625f48bc374dab3a27fa5856cf750801a2c",
+    "source_dataset_sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+    "normalization_sha256": "32bb83aaf35a9a750142c1e2484924686a9b98d5c3747205895cf5d5ad5491dc",
+    "delta_global_rms": 0.0045277050162483975,
+    "normalized_x": {
+      "shape": [
+        128
+      ],
+      "dtype": "torch.float32"
+    },
+    "velocity": {
+      "shape": [
+        193
+      ],
+      "dtype": "torch.float32"
+    },
+    "phase_time": {
+      "shape": [
+        31
+      ],
+      "dtype": "torch.float32"
+    },
+    "source_x_index": {
+      "shape": [
+        128
+      ],
+      "dtype": "torch.int32"
+    },
+    "source_v_index": {
+      "shape": [
+        193
+      ],
+      "dtype": "torch.int32"
+    },
+    "f0_train": {
+      "shape": [
+        193
+      ],
+      "dtype": "torch.float32"
+    },
+    "condition_bounds": {
+      "k_min": 0.45,
+      "k_max": 0.7,
+      "alpha_min": 0.005,
+      "alpha_max": 0.05,
+      "time_min": 0.0,
+      "time_max": 15.0
+    }
+  },
+  "model_state_dict_summary": {
+    "tensor_count": 47,
+    "parameter_count": 8569139
+  }
+}

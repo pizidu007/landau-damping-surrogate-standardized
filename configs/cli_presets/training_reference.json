@@ -1,0 +1,40 @@
+{
+  "note": "Parameter reference only; public trainers consume explicit CLI arguments.",
+  "common": {
+    "cache": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/processed/historical_exact/landau_deltaf_cache_x128_v193_v1.h5",
+    "mode": "formal",
+    "device": "cuda:0",
+    "threads": 8,
+    "amp": "bf16"
+  },
+  "snapshot": {
+    "entrypoint": "scripts/train_snapshot.py",
+    "epochs": 30,
+    "batch_size": 32,
+    "variant": "dual_head",
+    "condition_mode": "phase_aware",
+    "modes_x": 16,
+    "modes_v": 32
+  },
+  "one_step": {
+    "entrypoint": "scripts/train_one_step.py",
+    "epochs": 30,
+    "batch_size": 32,
+    "variant": "residual"
+  },
+  "multistep": {
+    "entrypoint": "scripts/train_multistep.py",
+    "epochs": 30,
+    "micro_batch_size": 8,
+    "effective_batch_size": 32,
+    "windows_per_case": 4,
+    "tbptt_steps": 2
+  },
+  "positivity": {
+    "entrypoint": "scripts/train_positivity.py",
+    "candidate": "absolute_hinge",
+    "epochs": 30,
+    "micro_batch_size": 8,
+    "effective_batch_size": 32
+  }
+}

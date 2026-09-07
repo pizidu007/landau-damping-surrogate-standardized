@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "dataset_version": "continuum_v1",
+  "dataset_root": "/rydata/duxinxu/landau-damping-surrogate-standardized/continuum_v1",
+  "description": "GPU Gkeyll normalized 1x1v nonlinear Landau damping dataset",
+  "normalization": {
+    "tau": "omega_pe*t",
+    "xi": "x/lambda_D",
+    "u": "v/v_th",
+    "g": "v_th*f/n0",
+    "electric_field": "e*E/(m_e*v_th*omega_pe)",
+    "K": "k_phys*lambda_D",
+    "note": "For the ideal fixed-ion Maxwellian 1x1v Vlasov system, n0 and T0 are scale metadata; normalized dynamics depend on K and alpha."
+  },
+  "solver": {
+    "binary": "/wangx/home/duxinxu/software/gkylsoft-paper-match/gkeyll/bin/gkeyll",
+    "input": "configs/gkeyll/continuum_v1_1x1v_p2.lua",
+    "gpu_required": true,
+    "minimum_free_gpu_memory_mib": 9500,
+    "basis": "serendipity",
+    "polynomial_order": 2,
+    "time_stepper": "rk3",
+    "cfl_fraction": 0.5
+  },
+  "profiles": {
+    "smoke": {
+      "purpose": "CUDA path and data-contract smoke test",
+      "fidelity": "smoke",
+      "nx": 16,
+      "nv": 32,
+      "vmax": 8.0,
+      "t_end": 0.1,
+      "num_frames": 2,
+      "distribution_frame_stride": 1,
+      "cases": [
+        {"K": 0.35, "alpha": 0.10}
+      ]
+    },
+    "anchors": {
+      "purpose": "Weak/transition/strong and boundary numerical anchors",
+      "fidelity": "converged-anchor-candidate",
+      "nx": 96,
+      "nv": 192,
+      "vmax": 8.0,
+      "t_end": 60.0,
+      "num_frames": 3000,
+      "distribution_frame_stride": 5,
+      "cases": [
+        {"K": 0.28, "alpha": 0.03},
+        {"K": 0.28, "alpha": 0.14},
+        {"K": 0.35, "alpha": 0.05},
+        {"K": 0.35, "alpha": 0.075},
+        {"K": 0.35, "alpha": 0.15},
+        {"K": 0.42, "alpha": 0.08},
+        {"K": 0.42, "alpha": 0.12},
+        {"K": 0.50, "alpha": 0.10},
+        {"K": 0.50, "alpha": 0.20}
+      ]
+    },
+    "anchors_low": {
+      "purpose": "Lower-resolution replicas for numerical convergence",
+      "fidelity": "convergence-low",
+      "nx": 64,
+      "nv": 128,
+      "vmax": 8.0,
+      "t_end": 60.0,
+      "num_frames": 3000,
+      "distribution_frame_stride": 5,
+      "cases": [
+        {"K": 0.28, "alpha": 0.03},
+        {"K": 0.28, "alpha": 0.14},
+        {"K": 0.35, "alpha": 0.05},
+        {"K": 0.35, "alpha": 0.075},
+        {"K": 0.35, "alpha": 0.15},
+        {"K": 0.42, "alpha": 0.08},
+        {"K": 0.42, "alpha": 0.12},
+        {"K": 0.50, "alpha": 0.10},
+        {"K": 0.50, "alpha": 0.20}
+      ]
+    },
+    "anchors_high": {
+      "purpose": "Higher-resolution replicas for numerical convergence",
+      "fidelity": "convergence-high",
+      "nx": 128,
+      "nv": 256,
+      "vmax": 8.0,
+      "t_end": 60.0,
+      "num_frames": 3000,
+      "distribution_frame_stride": 5,
+      "cases": [
+        {"K": 0.28, "alpha": 0.03},
+        {"K": 0.28, "alpha": 0.14},
+        {"K": 0.35, "alpha": 0.05},
+        {"K": 0.35, "alpha": 0.075},
+        {"K": 0.35, "alpha": 0.15},
+        {"K": 0.42, "alpha": 0.08},
+        {"K": 0.42, "alpha": 0.12},
+        {"K": 0.50, "alpha": 0.10},
+        {"K": 0.50, "alpha": 0.20}
+      ]
+    },
+    "scout": {
+      "purpose": "Phase-diagram scan used to locate the nonlinear transition band",
+      "fidelity": "scout",
+      "nx": 48,
+      "nv": 96,
+      "vmax": 8.0,
+      "t_end": 60.0,
+      "num_frames": 1200,
+      "distribution_frame_stride": 10,
+      "K_values": [0.28, 0.30, 0.32, 0.34, 0.36, 0.38, 0.40, 0.42, 0.44, 0.46, 0.48, 0.50],
+      "alpha_values": [0.03, 0.05, 0.07, 0.09, 0.11, 0.13, 0.15, 0.175, 0.20]
+    },
+    "production": {
+      "purpose": "High-fidelity trajectories selected after scout labeling",
+      "fidelity": "production",
+      "nx": 96,
+      "nv": 192,
+      "vmax": 8.0,
+      "t_end": 60.0,
+      "num_frames": 3000,
+      "distribution_frame_stride": 5,
+      "cases": []
+    }
+  },
+  "quality_policy": {
+    "gpu_stat_required": true,
+    "complete_terminal_frame_required": true,
+    "recurrence_safety": "tau_rec=2*pi/(K*Delta_u) must exceed 2*t_end for production unless an Nv-doubling anchor validates the case",
+    "velocity_boundary_audit": "compare vmax=8 against a widened-domain anchor",
+    "no_silent_clipping": true,
+    "whole_trajectory_split": true,
+    "equivalent_scale_group_split": true
+  }
+}

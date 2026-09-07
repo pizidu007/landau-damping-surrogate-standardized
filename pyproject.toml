@@ -1,0 +1,75 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "landau-damping-surrogate"
+version = "0.1.0"
+description = "FNO snapshot and autoregressive rollout surrogates for 1D1V Landau damping PIC trajectories"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Project contributors"}
+]
+dependencies = [
+  "numpy>=1.24,<3",
+  "h5py>=3.8,<4",
+  "matplotlib>=3.7,<4",
+  "numba>=0.57,<1",
+  "torch>=2.1"
+]
+
+[project.scripts]
+landau-train-snapshot = "landau_surrogate.training.snapshot:main"
+landau-train-one-step = "landau_surrogate.training.one_step:main"
+landau-train-multistep = "landau_surrogate.training.multistep:main"
+landau-train-positivity = "landau_surrogate.training.positivity:main"
+landau-infer-snapshot = "landau_surrogate.inference.snapshot:main"
+landau-infer-rollout = "landau_surrogate.inference.rollout:main"
+landau-build-conservative-cache = "landau_surrogate.tools.build_conservative_cache:main"
+landau-audit-conservative-cache = "landau_surrogate.tools.audit_conservative_cache:main"
+landau-physics-closure-audit = "landau_surrogate.tools.physics_closure_audit:main"
+landau-generate-nonlinear-pic = "landau_surrogate.tools.generate_nonlinear_pic:main"
+landau-generate-gkeyll-continuum-v1 = "landau_surrogate.tools.generate_gkeyll_continuum_v1:main"
+landau-audit-gkeyll-continuum-v1 = "landau_surrogate.tools.audit_gkeyll_continuum_v1:main"
+landau-audit-processed-gkeyll-continuum-v1 = "landau_surrogate.tools.audit_processed_gkeyll_continuum_v1:main"
+landau-process-gkeyll-continuum-v1 = "landau_surrogate.tools.process_gkeyll_continuum_v1:main"
+landau-select-gkeyll-continuum-v1 = "landau_surrogate.tools.select_gkeyll_continuum_v1:main"
+landau-compare-gkeyll-continuum-v1 = "landau_surrogate.tools.compare_gkeyll_continuum_v1:main"
+landau-freeze-gkeyll-continuum-v1-splits = "landau_surrogate.tools.freeze_gkeyll_continuum_v1_splits:main"
+landau-materialize-gkeyll-continuum-v1-scales = "landau_surrogate.tools.materialize_gkeyll_continuum_v1_scales:main"
+landau-audit-nonlinear-pic = "landau_surrogate.tools.audit_nonlinear_pic:main"
+landau-audit-closure-labels = "landau_surrogate.tools.audit_closure_labels:main"
+landau-train-closure = "landau_surrogate.training.closure:main"
+landau-train-continuum-v1-closure = "landau_surrogate.training.continuum_v1_closure:main"
+landau-train-continuum-v1-rollout-stability = "landau_surrogate.training.continuum_v1_rollout_stability:main"
+landau-train-continuum-v1-macrostep = "landau_surrogate.training.continuum_v1_macrostep:main"
+landau-plot-continuum-v1-closure = "landau_surrogate.tools.plot_continuum_v1_closure_results:main"
+landau-run-continuum-v1-test-rollouts = "landau_surrogate.tools.run_continuum_v1_test_rollouts:main"
+landau-run-continuum-v1-macrostep-rollouts = "landau_surrogate.tools.run_continuum_v1_macrostep_rollouts:main"
+landau-evaluate-closure = "landau_surrogate.tools.evaluate_closure:main"
+landau-evaluate-closure-baselines = "landau_surrogate.tools.evaluate_closure_baselines:main"
+landau-select-closure-model = "landau_surrogate.tools.select_closure_model:main"
+landau-train-closure-rollout = "landau_surrogate.training.closure_rollout:main"
+landau-run-fluid-closure = "landau_surrogate.tools.run_fluid_closure:main"
+landau-plot-closure-results = "landau_surrogate.tools.plot_closure_results:main"
+landau-summarize-closure-study = "landau_surrogate.tools.summarize_closure_study:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "ruff>=0.5"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"

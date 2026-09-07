@@ -1,0 +1,58 @@
+{
+  "snapshot_contract": {
+    "status": "COMPLETE",
+    "version": "stage10a2_closure_cache_v2",
+    "source_dataset_sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+    "normalization_sha256": "32bb83aaf35a9a750142c1e2484924686a9b98d5c3747205895cf5d5ad5491dc",
+    "sample_count": 3410,
+    "case_count": 110,
+    "field_shape": [
+      128,
+      193
+    ],
+    "x_stride": 4,
+    "v_stride": 8
+  },
+  "rollout_contract": {
+    "status": "COMPLETE",
+    "case_count": 110,
+    "phase_count": 31,
+    "pair_count": 3300,
+    "field_shape": [
+      128,
+      193
+    ],
+    "phase_time_start": 0.0,
+    "phase_time_end": 15.0,
+    "dt": 0.5,
+    "source_dataset_sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+    "normalization_sha256": "32bb83aaf35a9a750142c1e2484924686a9b98d5c3747205895cf5d5ad5491dc"
+  },
+  "root_attributes": {
+    "candidate_name": "x128_v193_conservative_m02_v2",
+    "case_count": "110",
+    "coarsening_semantics": "control-volume averages on stride-8 nodes plus smooth M2 projection; coarse trapezoidal quadrature preserves source M0 and M2 per x/frame",
+    "created_at_utc": "2026-07-25T06:32:09.140500+00:00",
+    "dataset_version": "stage10a2_closure_cache_v2",
+    "delta_global_rms": "0.0045277050162483975",
+    "field_shape_json": "[128, 193]",
+    "field_statistics_json": "{\"finite\": true, \"maximum\": 6.814575053443212, \"mean\": 1.237060145608526e-05, \"minimum\": -6.589786761038748, \"rms\": 0.9744719178007352}",
+    "m0_preservation": "exact within floating-point",
+    "m2_preservation": "exact within floating-point",
+    "mode": "formal",
+    "normalization": "frozen_train_only_global_rms",
+    "normalization_sha256": "32bb83aaf35a9a750142c1e2484924686a9b98d5c3747205895cf5d5ad5491dc",
+    "normalization_stats": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8d0_representation_reader/stage8d0_formal_v1/normalization_stats.npz",
+    "projection_m0_absolute_residual_max": "4.440892098500626e-16",
+    "projection_m2_absolute_residual_max": "3.3306690738754696e-16",
+    "reference_cache": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8d1_baselines/stage8d1a_cache_x128_v193_v1/landau_deltaf_cache_x128_v193_v1.h5",
+    "reference_cache_sha256": "84fd51e09e3898555a690aef3df57625f48bc374dab3a27fa5856cf750801a2c",
+    "representation": "delta_f0",
+    "sample_count": "3410",
+    "source_dataset": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8c4_xv_master_110/stage8c4_xv_master_110_v1/landau_xv_master_110_v1.h5",
+    "source_dataset_sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+    "status": "COMPLETE",
+    "v_stride": "8",
+    "x_stride": "4"
+  }
+}

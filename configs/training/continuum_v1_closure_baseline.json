@@ -1,0 +1,31 @@
+{
+  "data": {
+    "dataset_root": "/rydata/duxinxu/landau-damping-surrogate-standardized/continuum_v1",
+    "input_maximum_mode": 32,
+    "target_maximum_mode": 32,
+    "temporal_stride": 1
+  },
+  "model": {
+    "state_channels": 3,
+    "include_k": true,
+    "width": 128,
+    "modes": 32,
+    "layers": 4,
+    "enforce_zero_mean": true,
+    "normalization": "none",
+    "activation": "relu"
+  },
+  "training": {
+    "epochs": 60,
+    "batch_size": 8192,
+    "evaluation_batch_size": 8192,
+    "learning_rate": 0.002,
+    "minimum_learning_rate": 0.00001,
+    "weight_decay": 0.000001,
+    "spectral_loss_weight": 0.1,
+    "gradient_clip": 1.0,
+    "patience": 12,
+    "regime_sampling_power": 0.0,
+    "amp_bf16": true
+  }
+}

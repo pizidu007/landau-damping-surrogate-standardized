@@ -1,0 +1,438 @@
+{
+  "release_name": "landau-damping-surrogate-release",
+  "version": "0.1.0",
+  "source_bundle_sha256": "e267ecd8af2b01db980b5bb829a4585834a62a54dc3c29a8b784e79efc2644db",
+  "file_count": 86,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 280,
+      "sha256": "09c3ac5545db3eb55d28184feaa4442b3b75622a8652cc0a7443b18c92aabcb7"
+    },
+    {
+      "path": "CODE_REVIEW_REPORT.md",
+      "size_bytes": 2646,
+      "sha256": "4732e29de302eac4b4c011d6ff167b46b9309c578a2469bff545e09bf3c44039"
+    },
+    {
+      "path": "LICENSE",
+      "size_bytes": 35142,
+      "sha256": "8646559c866597b7bf28d110cde63de18f6d97354bf22559053301bc3ca492c5"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 6506,
+      "sha256": "904e8bfcdd0fea7c0886f06d90a4202c08ec3c9d79ca9f0a719ba81b9cae86c4"
+    },
+    {
+      "path": "RELEASE_NOTES.md",
+      "size_bytes": 1134,
+      "sha256": "4aee676a6b359ebf865f8ba2257e23ec2eb74eb2f9aae7b300bad979289009c7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "size_bytes": 802,
+      "sha256": "db857f621b2aa255e50d25d94b23d1cc39fe6db08296b14a2e106e7ffc0e612c"
+    },
+    {
+      "path": "UPLOAD_CHECKLIST.md",
+      "size_bytes": 918,
+      "sha256": "44d110b82f1d98ca846511ba384a2a840f290036d3a1ddf708e1e9c87d6cbbc5"
+    },
+    {
+      "path": "docs/DATA_AND_CHECKPOINTS.md",
+      "size_bytes": 1238,
+      "sha256": "c631a8f852d73644e504ec3c9cf222ae7b7033b3b87d99b9a387afe08010c4b9"
+    },
+    {
+      "path": "docs/DATA_FORMAT.md",
+      "size_bytes": 1524,
+      "sha256": "1bd4de4551a7422f4db32ec45101c291c0bee1b32245c5eeff492322c46c4b3f"
+    },
+    {
+      "path": "docs/LEGACY_STAGE_MAPPING.md",
+      "size_bytes": 848,
+      "sha256": "639969ea2cbf1ed751dd4bb46f9c508015ffb9289368a5fa535affc1a0343c8a"
+    },
+    {
+      "path": "docs/METHOD.md",
+      "size_bytes": 1798,
+      "sha256": "215619b9791507ad8f51f0e0b1b6fe3d08a18ef93249a9d456563fcfc032e9ec"
+    },
+    {
+      "path": "docs/PHYSICS_DIAGNOSTICS.md",
+      "size_bytes": 1483,
+      "sha256": "1a30d543296e599cf1d9f89c7631c6506c36927bd68b219f1713ff93a46f1a97"
+    },
+    {
+      "path": "docs/README_zh-CN.md",
+      "size_bytes": 1293,
+      "sha256": "190c85a43c5e20b5d9d3965bc7a508f4022444e1ea9e2bc19beafc18d385bf2b"
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.md",
+      "size_bytes": 2180,
+      "sha256": "bbff2df8fec159480f22749bc29ed7b903c7b1351553abb91fca97e276b8d99a"
+    },
+    {
+      "path": "docs/RESULTS.md",
+      "size_bytes": 1714,
+      "sha256": "bc2123f69bf43132d7dd8d6fdf6058f32f6dba8b123fda94bc8f8eddbb232198"
+    },
+    {
+      "path": "docs/artifact_metadata/conservative_cache_reference.json",
+      "size_bytes": 1621,
+      "sha256": "675f3ebe71f3d35807339a6c34bd55d97082c5e9ce602e5b361ac2f953c22ad6"
+    },
+    {
+      "path": "docs/artifact_metadata/positivity_model_card.json",
+      "size_bytes": 15128,
+      "sha256": "e0bec539b6e2594b743090c6f3ab8e37ea45a57e955e02760c3d21e4441a4b08"
+    },
+    {
+      "path": "docs/artifact_metadata/rollout_model_card.json",
+      "size_bytes": 7989,
+      "sha256": "b14e1a05689d976b9a9d3243d3d38c548ee7b0e6b59ac5f333394d97010ae687"
+    },
+    {
+      "path": "docs/artifact_metadata/snapshot_model_card.json",
+      "size_bytes": 3015,
+      "sha256": "82dbae7f24d40f95690e6f10125c83b82246bdae6c05a5e5364783c46411b01b"
+    },
+    {
+      "path": "examples/README.md",
+      "size_bytes": 291,
+      "sha256": "c8beee655899d9d832c7f2eef7f44a1e8fda18aa2b296c0bd3fc7d5b2bb2ce0d"
+    },
+    {
+      "path": "examples/create_tiny_cache.py",
+      "size_bytes": 3079,
+      "sha256": "eeef5579f4db6517dfdea1d03dcd0125276affc7884aa745320b3c37f3fc195d"
+    },
+    {
+      "path": "legacy/README.md",
+      "size_bytes": 267,
+      "sha256": "b15d674a09623acca6eb546acb6c912e422fde18859d06c87464994fb277aa22"
+    },
+    {
+      "path": "legacy/notebooks/2018-06-01_movie_EVDF.ipynb",
+      "size_bytes": 10655,
+      "sha256": "4777e4264c756512b6d9887aa055e8f7a8aff90cfe9e6748ceaf1aa9ac57ddf9"
+    },
+    {
+      "path": "legacy/notebooks/Main.ipynb",
+      "size_bytes": 114817,
+      "sha256": "fcad56527b363a638e1d8905322a20870db60a50e8b8283a14061f9d9c6762d2"
+    },
+    {
+      "path": "legacy/notebooks/Process_1D_PIC.ipynb",
+      "size_bytes": 227534,
+      "sha256": "f0a5502cd1b578c845036ee4407b3f212c5391bfa58d2051dec2b3508a1277bf"
+    },
+    {
+      "path": "legacy/pic_examples/birdsall/main.py",
+      "size_bytes": 3660,
+      "sha256": "7f6121f89a62f8c48ad49b21e05e22d63ec18e355234d11ba0fbe83c0045bab0"
+    },
+    {
+      "path": "legacy/pic_examples/inft_sh/main.py",
+      "size_bytes": 4018,
+      "sha256": "bb458b7a3ceca9da10d75ebfb9d151449f426d3a135dbc1902e79f3a4df1b09c"
+    },
+    {
+      "path": "legacy/pic_examples/no_potential/main.py",
+      "size_bytes": 3892,
+      "sha256": "2475cd262f2602f2144ac46c070d2db6500f19dd511b600b5aad31fb278fd94b"
+    },
+    {
+      "path": "pyproject.toml",
+      "size_bytes": 789,
+      "sha256": "f436ff35a70c17b407189ac54cbbc6afad8446b7a547042de6c9ca48c6648204"
+    },
+    {
+      "path": "requirements-reference.txt",
+      "size_bytes": 164,
+      "sha256": "834b572962c08d30b9ac43cabe70267a0402db38f0f84c0423bd0ca64b096481"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 151,
+      "sha256": "fc72497e2b7416167d8ea43f9e988dfd1f900b8726ca042fff6960fea92a340c"
+    },
+    {
+      "path": "scripts/audit_conservative_cache.py",
+      "size_bytes": 215,
+      "sha256": "b07ac471c8b886af9e2b5fe62db897a996959a65fb6805f50875d2d9ffe3fa0d"
+    },
+    {
+      "path": "scripts/build_conservative_cache.py",
+      "size_bytes": 215,
+      "sha256": "cde2343114ffe975a97662d57126e72690bb765e4d8f8ef98214a8e5235c6a28"
+    },
+    {
+      "path": "scripts/closure_inference.py",
+      "size_bytes": 201,
+      "sha256": "ec2c0db8d4fa9ffea9af21d7e245a7d5e21daf17e71d9591a770520e09331aa4"
+    },
+    {
+      "path": "scripts/infer_rollout.py",
+      "size_bytes": 189,
+      "sha256": "f9123b7a26702153b718b66a8b137155ed858a830bc84f562d2407a91a5ad5c4"
+    },
+    {
+      "path": "scripts/infer_snapshot.py",
+      "size_bytes": 191,
+      "sha256": "9e1d095bb757ba732d012b830c45a5e473c377cede6006eee8d14e75cccf60f9"
+    },
+    {
+      "path": "scripts/inspect_cache.py",
+      "size_bytes": 851,
+      "sha256": "5c296945bf713805f9fd64288df77889b182313c877a501a5a6d4b5016fb1918"
+    },
+    {
+      "path": "scripts/inspect_checkpoint.py",
+      "size_bytes": 1312,
+      "sha256": "832998cee0855a3d4d3a1818d36f721fe3fc79a1b62ef53b9f11eea8d9ff5188"
+    },
+    {
+      "path": "scripts/physics_closure_audit.py",
+      "size_bytes": 209,
+      "sha256": "bc92879fb4f2b3c107ea84003b86f48ec79e277efec4925932749e7359354661"
+    },
+    {
+      "path": "scripts/train_multistep.py",
+      "size_bytes": 191,
+      "sha256": "b557640781f76882eaa6257dffa020d7f4effa1c1173bdfe1c26bcc677b69026"
+    },
+    {
+      "path": "scripts/train_one_step.py",
+      "size_bytes": 189,
+      "sha256": "18969b5f41ae6d8bcc6baa606973f466935983fad6bfcad569201b34f446d4a8"
+    },
+    {
+      "path": "scripts/train_positivity.py",
+      "size_bytes": 193,
+      "sha256": "12ef37f7828e17b704841b27d14e12edeba40363a6dc99e05b54390f289435db"
+    },
+    {
+      "path": "scripts/train_snapshot.py",
+      "size_bytes": 189,
+      "sha256": "8e2c4d2e619ddf3327789246f7fac120a2d6e40fbe8589f1bb98b9ef72f9c27f"
+    },
+    {
+      "path": "src/landau_surrogate/__init__.py",
+      "size_bytes": 339,
+      "sha256": "527bb346c1b294b24e536a31325a765e47e0ac21b1b6e9ee7c00ce63bb367213"
+    },
+    {
+      "path": "src/landau_surrogate/data/__init__.py",
+      "size_bytes": 23,
+      "sha256": "6a9a1048e2fd4fca90347ffe23515911aaa9bb03787b4982142b63e49856c265"
+    },
+    {
+      "path": "src/landau_surrogate/data/conservative.py",
+      "size_bytes": 10363,
+      "sha256": "3af3192c19533b38ec31f55621c57027df8b3141fd492cf0ec79fb22403321ab"
+    },
+    {
+      "path": "src/landau_surrogate/data/rollout_cache.py",
+      "size_bytes": 13649,
+      "sha256": "ed55a5fd1cf533dce64a346db68c126311c730fa4c89cfbbba7600799de9b81d"
+    },
+    {
+      "path": "src/landau_surrogate/data/rollout_windows.py",
+      "size_bytes": 9890,
+      "sha256": "a1fd381ddb26e2079e457fddd52a21cd04694e8f65047d773f09eb00e5ea6935"
+    },
+    {
+      "path": "src/landau_surrogate/data/snapshot_cache.py",
+      "size_bytes": 9482,
+      "sha256": "24bacc327c88e1bbdf3af8a120a163f59df60e81e3081e4b5811a958a1301964"
+    },
+    {
+      "path": "src/landau_surrogate/diagnostics/__init__.py",
+      "size_bytes": 30,
+      "sha256": "5ca047a90cda202d35398c4e29a76262e0c344b05a83ab18c734c72827d41402"
+    },
+    {
+      "path": "src/landau_surrogate/diagnostics/rollout.py",
+      "size_bytes": 27843,
+      "sha256": "860f0d5c2be259f96b897f0f9d03f52ecb6eb5554a8e0dd21bd16632158e6caa"
+    },
+    {
+      "path": "src/landau_surrogate/inference/__init__.py",
+      "size_bytes": 28,
+      "sha256": "b7546cadf09108b8868b171a320af55f8e56212d1e014797a0167927435cd2e5"
+    },
+    {
+      "path": "src/landau_surrogate/inference/rollout.py",
+      "size_bytes": 9916,
+      "sha256": "eaf4b358cb5745fcd7bc0d31f5c94609bfc8cdc16a58a4ebc333a81963df55b7"
+    },
+    {
+      "path": "src/landau_surrogate/inference/snapshot.py",
+      "size_bytes": 7963,
+      "sha256": "5cb8f130b18e9e568d7afe6b406cedbba7309fd15ed6c42a265e0eeecb5949f8"
+    },
+    {
+      "path": "src/landau_surrogate/losses/__init__.py",
+      "size_bytes": 25,
+      "sha256": "cd9eef2f292c73e994c68976396ed909f9f0b8243e34c59e683714b684fa0114"
+    },
+    {
+      "path": "src/landau_surrogate/losses/positivity.py",
+      "size_bytes": 12245,
+      "sha256": "997282aea81cbd3dc91beb0b5ec322d9735036b50dc1a25d4c5fb89678aa8bfa"
+    },
+    {
+      "path": "src/landau_surrogate/losses/spectral.py",
+      "size_bytes": 11364,
+      "sha256": "8024474015dafe7cb9a1dc8ae3085fbf14f8d43df0c93b815eb6a1bbbb2566cb"
+    },
+    {
+      "path": "src/landau_surrogate/models/__init__.py",
+      "size_bytes": 25,
+      "sha256": "0b86ecb4fa8a5a898d12f4d0237a102785e10bb7a1f22b3fc078b1d13464c508"
+    },
+    {
+      "path": "src/landau_surrogate/models/snapshot_fno.py",
+      "size_bytes": 20682,
+      "sha256": "a6d474418e46f56fe6292ffdd88c8ee557b83660e6cbb22c62ec67f586d64ba5"
+    },
+    {
+      "path": "src/landau_surrogate/models/stepper_fno.py",
+      "size_bytes": 20876,
+      "sha256": "fc108705d6970499222096bb7c7abee3c9b0f47770f60efa77bbd7e75081a32f"
+    },
+    {
+      "path": "src/landau_surrogate/physics/__init__.py",
+      "size_bytes": 26,
+      "sha256": "f35613f8ec9b91e2d87c1014ae3a0f572f9e69bdb34d384c7c23feef02eaf30c"
+    },
+    {
+      "path": "src/landau_surrogate/physics/closure.py",
+      "size_bytes": 15685,
+      "sha256": "d53658a42a0084df9e7deb33623e760e8c7840d610aa159f2446eb48071e731f"
+    },
+    {
+      "path": "src/landau_surrogate/pic/__init__.py",
+      "size_bytes": 206,
+      "sha256": "d96c585838e20144bcc86be9fb52ddadbb66fac92e8a4e8877a628436d86c357"
+    },
+    {
+      "path": "src/landau_surrogate/pic/constantes.py",
+      "size_bytes": 191,
+      "sha256": "e2be26523e4cdc66f0f237ec50ac20a39e9b5ed885e32f81e5064d92ef5b0023"
+    },
+    {
+      "path": "src/landau_surrogate/pic/functions.py",
+      "size_bytes": 7497,
+      "sha256": "a04374d2aa8563ec93209b3f82e1ab5b6fb84d5cf75aba1c09310060e646e1e7"
+    },
+    {
+      "path": "src/landau_surrogate/pic/gui.py",
+      "size_bytes": 2795,
+      "sha256": "b6e6c32a32e789c25c84b9f48fad9a224675b6bbf8adf56fbd9219e52e2fdf1f"
+    },
+    {
+      "path": "src/landau_surrogate/pic/particles.py",
+      "size_bytes": 4520,
+      "sha256": "6a2c3d8c52f84c8da498f6b139561c2a3cdb296186309493453251574bda280e"
+    },
+    {
+      "path": "src/landau_surrogate/pic/plasma.py",
+      "size_bytes": 12521,
+      "sha256": "cee3fa4d58d2161fe977f42dcd1d65b67690c20aa14418aa6bd3377e8b3ad1eb"
+    },
+    {
+      "path": "src/landau_surrogate/pic/poisson_solver.py",
+      "size_bytes": 1601,
+      "sha256": "1c843a8501205ae0cc8032d67d2dbcc097815b92a634a2ab77dd1523cc48c6b1"
+    },
+    {
+      "path": "src/landau_surrogate/pic/simulation.py",
+      "size_bytes": 1395,
+      "sha256": "d6522763e856140c7e1f9df8300c7f100d4f4474c8982afb8f443a29c240b068"
+    },
+    {
+      "path": "src/landau_surrogate/tools/__init__.py",
+      "size_bytes": 24,
+      "sha256": "9aa1885c0b8b7a88032e808eb1554fa154131651dbbfddb0eeab6f6c1e8d6fff"
+    },
+    {
+      "path": "src/landau_surrogate/tools/audit_conservative_cache.py",
+      "size_bytes": 19876,
+      "sha256": "cea9d2958dc323fb5bab3c9f3f82cd7fa6e2e0e0ff60bae3b0e6c5c689dd9de0"
+    },
+    {
+      "path": "src/landau_surrogate/tools/build_conservative_cache.py",
+      "size_bytes": 21873,
+      "sha256": "f231930e393900d6357660254a731e41121618b1e848be28ec691538987f5fc6"
+    },
+    {
+      "path": "src/landau_surrogate/tools/closure_inference.py",
+      "size_bytes": 9748,
+      "sha256": "74f61302bf62e5c732275a70d3bf26d90a13bedb26f04f2e6db7bc4e4d2f233f"
+    },
+    {
+      "path": "src/landau_surrogate/tools/physics_closure_audit.py",
+      "size_bytes": 31814,
+      "sha256": "0ecbe96368be6afd39847ec6a11ecabebf699093458f640756f6498d76ffe086"
+    },
+    {
+      "path": "src/landau_surrogate/training/__init__.py",
+      "size_bytes": 27,
+      "sha256": "221139b446f96a76a1b282d71383977b47d7d003e306d7b94f6ceee19f15b999"
+    },
+    {
+      "path": "src/landau_surrogate/training/multistep.py",
+      "size_bytes": 30868,
+      "sha256": "534a2c0655e03d1be388f4b097a9644ef19af31edbaff768a1fb5d84259a9504"
+    },
+    {
+      "path": "src/landau_surrogate/training/one_step.py",
+      "size_bytes": 43614,
+      "sha256": "1f60ac01d75fa34ea2ccdb4077aaa0c3e03e8f28ff2befe7723489f69e02a91d"
+    },
+    {
+      "path": "src/landau_surrogate/training/positivity.py",
+      "size_bytes": 34845,
+      "sha256": "6f38239a5d82dcb95e7065b60df07b1c9e1eb209a2c500eb1dd3f5fde0677ca9"
+    },
+    {
+      "path": "src/landau_surrogate/training/snapshot.py",
+      "size_bytes": 41108,
+      "sha256": "ce1c4ae051e2f0f535a5a560c4dad01ccdee43d471eddf4f87c31ee938678d98"
+    },
+    {
+      "path": "src/landau_surrogate/version.py",
+      "size_bytes": 22,
+      "sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed"
+    },
+    {
+      "path": "tests/conftest.py",
+      "size_bytes": 2983,
+      "sha256": "7d9ee9e1a4162840997510c5a336addab77c8625f261925f2240c8b443789aa5"
+    },
+    {
+      "path": "tests/test_data_contract.py",
+      "size_bytes": 1162,
+      "sha256": "d5a76f1a02a6cfeb070c686b8db3cfa9cd5e17d97d3bbb836cf26fb520d18827"
+    },
+    {
+      "path": "tests/test_models.py",
+      "size_bytes": 1901,
+      "sha256": "67537cd402325ea618d7c936605827e182e3d4d10f9e17ddde6e634043e17ad2"
+    },
+    {
+      "path": "tests/test_physics.py",
+      "size_bytes": 817,
+      "sha256": "277203e62a48d1f93646afaa712bc634acbb14b92c7720b1168a0343adba0536"
+    },
+    {
+      "path": "tests/test_positivity.py",
+      "size_bytes": 504,
+      "sha256": "3f3efea63f430d1b23f383d771cf36d4752135c220848d620601b053db6621fc"
+    }
+  ]
+}

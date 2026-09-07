@@ -1,0 +1,32 @@
+diff --git a/gkeyll/gkeyll.c b/gkeyll/gkeyll.c
+index 9f6d829..bc48d5c 100644
+--- a/gkeyll/gkeyll.c
++++ b/gkeyll/gkeyll.c
+@@ -5,6 +5,10 @@
+ // + 6 @ |||| # P ||| +
+ //------------------------------------------------------------------------------
+ 
++#if defined(__CUDACC__) && !defined(GKYL_HAVE_CUDA)
++#define GKYL_HAVE_CUDA
++#endif
++
+ #ifdef GKYL_HAVE_LUA
+ 
+ #include <lua.h>
+@@ -221,7 +225,7 @@ show_version()
+ #ifdef GKYL_BUILD_DATE
+   fprintf(stdout, "Built on %s\n", STRINGIFY(GKYL_BUILD_DATE));
+ #endif
+-#ifdef GKYL_HAVE_NCCL
++#ifdef GKYL_HAVE_CUDA
+   fprintf(stdout, "Built with CUDA\n");
+ #else
+   fprintf(stdout, "Built without CUDA\n");
+@@ -416,7 +420,7 @@ main(int argc, char **argv)
+     lua_setglobal(L, "GKYL_MPI_COMM");
+   }
+ 
+-#ifdef GKYL_HAVE_NCCL
++#ifdef GKYL_HAVE_CUDA
+   lua_pushboolean(L, true);
+   lua_setglobal(L, "GKYL_HAVE_CUDA");

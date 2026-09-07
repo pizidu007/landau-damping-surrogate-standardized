@@ -1,0 +1,19 @@
+[data]
+root = "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized"
+mother = "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/raw/pic/landau_xv_master_110_v1.h5"
+historical_cache = "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/processed/historical_exact/landau_deltaf_cache_x128_v193_v1.h5"
+conservative_cache = "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/processed/conservative_m02/landau_deltaf_cache_x128_v193_conservative_m02_v2.h5"
+nonlinear_runs = "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/nonlinear/runs"
+
+[models]
+snapshot = "models/snapshot/snapshot_best.pt"
+rollout = "models/rollout/rollout_positivity_best.pt"
+
+[outputs]
+runs = "results/runs"
+logs = "logs"
+
+[artifacts]
+manifest = "artifacts/manifests/assets.json"
+inspections = "artifacts/inspections"
+model_cards = "artifacts/model_cards"

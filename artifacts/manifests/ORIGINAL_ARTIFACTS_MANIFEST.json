@@ -1,0 +1,48 @@
+{
+  "project": "landau-damping-surrogate-refactored",
+  "artifacts": [
+    {
+      "name": "legacy_training_cache",
+      "path": "data/landau_deltaf_cache_x128_v193_v1.h5",
+      "size_bytes": 186152364,
+      "sha256": "84fd51e09e3898555a690aef3df57625f48bc374dab3a27fa5856cf750801a2c",
+      "role": "Exact cache used by the historical snapshot/rollout training chain."
+    },
+    {
+      "name": "conservative_cache",
+      "path": "data/landau_deltaf_cache_x128_v193_conservative_m02_v2.h5",
+      "size_bytes": 271364016,
+      "sha256": "f00a6618a29c96a9f4e1c5cfea5d3372656fd925355678eecf907b3332892236",
+      "role": "M0/M2-conservative cache for closure diagnostics and future retraining."
+    },
+    {
+      "name": "rollout_positivity_checkpoint",
+      "path": "checkpoints/rollout_positivity_best.pt",
+      "size_bytes": 68599602,
+      "sha256": "b94434678c1a1cdd8d22e5e94b4bfa2ba2ddfc2ba8b7fc4e0acded76c9077dd5",
+      "role": "Final Stage 9B positivity rollout model."
+    },
+    {
+      "name": "snapshot_checkpoint",
+      "path": "checkpoints/snapshot_best.pt",
+      "size_bytes": 34299788,
+      "sha256": "a45058a899d7338ef0acbf398dac02e61ffab4c164c123d84382b2265889984b",
+      "role": "Final direct snapshot baseline."
+    }
+  ],
+  "rollout_checkpoint_contract": {
+    "stage": "stage9b_final_positivity_rollout",
+    "version": "stage9b_positivity_v1",
+    "selected_candidate": "absolute_hinge",
+    "dt": 0.5,
+    "mean_anchor_beta": 0.5,
+    "field_shape": [
+      128,
+      193
+    ],
+    "embedded_cache_sha256": "84fd51e09e3898555a690aef3df57625f48bc374dab3a27fa5856cf750801a2c",
+    "source_dataset_sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+    "matches_legacy_cache": true,
+    "matches_conservative_cache": false
+  }
+}

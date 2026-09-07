@@ -1,0 +1,27 @@
+{
+  "purpose": "research-only paper-style memoryless raw-moment closure",
+  "case": "k0p350_a0p100",
+  "replica_reduction": "mean of three CUDA-PIC seeds",
+  "state": ["M0", "M1/M0", "M2"],
+  "target": "spectral dM3/dx",
+  "maximum_target_mode": 24,
+  "split": "same-trajectory interleaved 8/1/1",
+  "model": {
+    "type": "FNO1d",
+    "width": 64,
+    "modes": 24,
+    "layers": 4,
+    "history": 1,
+    "enforce_zero_mean": true
+  },
+  "training": {
+    "epochs": 200,
+    "batch_size": 64,
+    "learning_rate": 0.002,
+    "patience": 30,
+    "selected_seed": 1
+  },
+  "checkpoint": "models/closure/closure_fno_pic_v3_raw_single_research.pt",
+  "deployment_approved": false,
+  "rejection_reason": "paper-like mode-24 free rollout stops at t=1.8"
+}

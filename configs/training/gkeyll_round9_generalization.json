@@ -1,0 +1,45 @@
+{
+  "round": "gkeyll_round9_strict_generalization",
+  "objective": "Separate same-trajectory temporal extrapolation from whole-trajectory cross-case generalization.",
+  "fixed_model": {
+    "architecture": "FNO1d",
+    "width": 128,
+    "modes": 32,
+    "layers": 4,
+    "epochs": 100,
+    "batch_size": 256,
+    "seeds": [0, 1, 2],
+    "rollout_dt": 0.002,
+    "rollout_maximum_mode": 8,
+    "rollout_finetuning": false
+  },
+  "single_case_temporal_extrapolation": {
+    "trajectory": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/gkeyll/paper_match_single_v1/processed/huang2025_k0p35_a0p10_t40.h5",
+    "protocol": "causal",
+    "train_fraction": 0.60,
+    "validation_fraction": 0.15,
+    "test_fraction": 0.25,
+    "approximate_time_windows": {
+      "train": [0.0, 24.0],
+      "validation": [24.0, 30.0],
+      "test": [30.0, 40.0]
+    }
+  },
+  "cross_case_generalization": {
+    "dataset_root": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/gkeyll/paper_match_multicase_v1",
+    "manifest": "configs/gkeyll/multicase_pilot_v1.json",
+    "split_unit": "complete trajectory",
+    "train_cases": 8,
+    "validation_cases": 2,
+    "test_cases": [
+      {"k": 0.35, "alpha": 0.075},
+      {"k": 0.40, "alpha": 0.10}
+    ]
+  },
+  "reporting": {
+    "primary_closed_loop_metric": "field_energy_log10_rmse",
+    "report_all_seeds": true,
+    "aggregate": ["median", "minimum", "maximum"],
+    "show_best_seed_only": false
+  }
+}

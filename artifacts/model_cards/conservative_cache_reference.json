@@ -1,0 +1,54 @@
+{
+  "cache_name": "x128_v193_conservative_m02_v2",
+  "path": "landau_deltaf_cache_x128_v193_conservative_m02_v2.h5",
+  "sha256": "f00a6618a29c96a9f4e1c5cfea5d3372656fd925355678eecf907b3332892236",
+  "size_bytes": 271364016,
+  "case_count": 110,
+  "field_ready_case_count": 110,
+  "closure_ready_case_count": 110,
+  "all_cases_field_ready": true,
+  "all_cases_closure_ready": true,
+  "quadrature_weight_max_error": 0.0,
+  "worst": {
+    "density_relative_l2": {
+      "case_id": "k0p475_a0p050",
+      "alpha": 0.05000000074505806,
+      "value": 0.0006270092882475955
+    },
+    "charge_solvable_relative_l2": {
+      "case_id": "k0p70_a0p045",
+      "alpha": 0.04500000178813934,
+      "value": 0.07074331080535647
+    },
+    "electric_field_relative_l2": {
+      "case_id": "k0p70_a0p030",
+      "alpha": 0.029999999329447746,
+      "value": 0.011437699315646874
+    },
+    "field_energy_relative_l2": {
+      "case_id": "k0p70_a0p030",
+      "alpha": 0.029999999329447746,
+      "value": 0.023834550093997764
+    },
+    "kinetic_energy_relative_l2": {
+      "case_id": "k0p475_a0p050",
+      "alpha": 0.05000000074505806,
+      "value": 0.0002466362458241494
+    },
+    "total_energy_relative_l2": {
+      "case_id": "k0p475_a0p050",
+      "alpha": 0.05000000074505806,
+      "value": 0.0002442647070158478
+    },
+    "poisson_residual_absolute_max": {
+      "case_id": "k0p65_a0p050",
+      "alpha": 0.05000000074505806,
+      "value": 8.467364857227613e-18
+    },
+    "mean_charge_absolute_max": {
+      "case_id": "k0p45_a0p035",
+      "alpha": 0.03500000014901161,
+      "value": 0.0002963696306745624
+    }
+  }
+}

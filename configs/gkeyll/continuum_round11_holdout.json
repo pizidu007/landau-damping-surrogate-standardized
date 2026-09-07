@@ -1,0 +1,109 @@
+{
+  "dataset_root": "/rydata/duxinxu/landau-damping-surrogate-standardized/continuum_round11_holdout",
+  "dataset_version": "continuum_v1",
+  "description": "Round 11 independent holdout; generation permitted only after frozen validation-qualified checkpoint.",
+  "normalization": {
+    "K": "k_phys*lambda_D",
+    "electric_field": "e*E/(m_e*v_th*omega_pe)",
+    "g": "v_th*f/n0",
+    "note": "For the ideal fixed-ion Maxwellian 1x1v Vlasov system, n0 and T0 are scale metadata; normalized dynamics depend on K and alpha.",
+    "tau": "omega_pe*t",
+    "u": "v/v_th",
+    "xi": "x/lambda_D"
+  },
+  "profiles": {
+    "blind": {
+      "purpose": "Frozen independent parameter holdout and same-device observed timing",
+      "fidelity": "round11-independent-holdout",
+      "nx": 128,
+      "nv": 256,
+      "vmax": 8.0,
+      "t_end": 80.0,
+      "num_frames": 800,
+      "distribution_frame_stride": 800,
+      "cases": [
+        {
+          "K": 0.287,
+          "alpha": 0.044,
+          "domain": "interpolation"
+        },
+        {
+          "K": 0.327,
+          "alpha": 0.091,
+          "domain": "interpolation"
+        },
+        {
+          "K": 0.367,
+          "alpha": 0.142,
+          "domain": "interpolation"
+        },
+        {
+          "K": 0.407,
+          "alpha": 0.183,
+          "domain": "interpolation"
+        },
+        {
+          "K": 0.447,
+          "alpha": 0.057,
+          "domain": "interpolation"
+        },
+        {
+          "K": 0.487,
+          "alpha": 0.166,
+          "domain": "interpolation"
+        },
+        {
+          "K": 0.28,
+          "alpha": 0.191,
+          "domain": "boundary"
+        },
+        {
+          "K": 0.5,
+          "alpha": 0.064,
+          "domain": "boundary"
+        },
+        {
+          "K": 0.265,
+          "alpha": 0.115,
+          "domain": "K_extrapolation"
+        },
+        {
+          "K": 0.515,
+          "alpha": 0.155,
+          "domain": "K_extrapolation"
+        },
+        {
+          "K": 0.355,
+          "alpha": 0.025,
+          "domain": "alpha_extrapolation"
+        },
+        {
+          "K": 0.425,
+          "alpha": 0.215,
+          "domain": "alpha_extrapolation"
+        }
+      ]
+    }
+  },
+  "quality_policy": {
+    "complete_terminal_frame_required": true,
+    "equivalent_scale_group_split": true,
+    "gpu_stat_required": true,
+    "no_silent_clipping": true,
+    "recurrence_safety": "tau_rec=2*pi/(K*Delta_u) must exceed 2*t_end for production unless an Nv-doubling anchor validates the case",
+    "velocity_boundary_audit": "compare vmax=8 against a widened-domain anchor",
+    "whole_trajectory_split": true
+  },
+  "schema_version": 1,
+  "solver": {
+    "basis": "serendipity",
+    "binary": "/wangx/home/duxinxu/software/gkylsoft-paper-match/gkeyll/bin/gkeyll",
+    "cfl_fraction": 0.5,
+    "gpu_required": true,
+    "input": "configs/gkeyll/continuum_v1_1x1v_p2.lua",
+    "minimum_free_gpu_memory_mib": 9500,
+    "polynomial_order": 2,
+    "time_stepper": "rk3"
+  },
+  "preregistration_note": "Parameter list prepared before model freeze; no new kinetic trajectories generated or inspected until the postquality freeze manifest exists. Moment output interval 0.1 matches surrogate evaluation; distributions only at endpoints."
+}

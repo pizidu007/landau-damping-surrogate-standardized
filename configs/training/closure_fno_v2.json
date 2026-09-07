@@ -1,0 +1,47 @@
+{
+  "dataset": {
+    "run_dir": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/nonlinear/runs/nonlinear_formal_v1",
+    "paper_match_run_dir": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/nonlinear/runs/huang_paper_match_pic_v2",
+    "huang_public_mat": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/external/huang2025_gkeyll_v1/raw/A01_data.mat",
+    "average_pic_seeds": true,
+    "time_stride": 1,
+    "target_maximum_mode": 24,
+    "note": "The public A005_data.mat and A01_data.mat are byte-identical. Continuity infers a raw snapshot cadence of 0.00513; experiments use 0.005. The exported p_new/q_new satisfy raw M2/M3 moment equations and must be converted before comparison with PIC central moments."
+  },
+  "huang_reproduction": {
+    "paper_like": {
+      "frames": 8000,
+      "split": "interleaved 6400/800/800",
+      "epochs": 100
+    },
+    "causal": {
+      "frames": 8000,
+      "split": "t=[0,24)/[24,30)/[30,40]",
+      "epochs": 100
+    }
+  },
+  "supervised": {
+    "target": "spectrally filtered heat flux q",
+    "variants": ["nupk_q", "nupk_q_history3", "nupk_q_history5"],
+    "epochs": 80,
+    "batch_size": 128,
+    "width": 64,
+    "modes": 24,
+    "layers": 4,
+    "learning_rate": 0.002,
+    "history_selected": 5
+  },
+  "rollout": {
+    "integrator": "RK4",
+    "field_solvers_checked": ["poisson", "ampere"],
+    "substep_dt_checked": [0.02, 0.005],
+    "maximum_mode": 24,
+    "validation_horizon": 60.0,
+    "hp_blends_checked": [0.0, 0.5, 0.75]
+  },
+  "rollout_finetune": {
+    "windows_checked": [5, 20],
+    "field_weight_checked": [0.0, 0.05],
+    "selection_rule": "Accept only if the independent validation rollout improves; otherwise retain the supervised checkpoint."
+  }
+}

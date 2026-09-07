@@ -1,0 +1,5 @@
+#!/bin/sh
+# Keep the CUDA compiler and its supported modern host compiler explicit.
+exec /usr/local/cuda-12.1/bin/nvcc \
+  -ccbin /wangx/home/duxinxu/software/micromamba-root-v1/envs/gkeyll-build/bin/x86_64-conda-linux-gnu-gcc \
+  "$@"

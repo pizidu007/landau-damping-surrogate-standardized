@@ -1,0 +1,10 @@
+{
+  "entrypoint": "scripts/infer_snapshot.py",
+  "checkpoint": "models/snapshot/snapshot_best.pt",
+  "k": 0.55,
+  "alpha": 0.04,
+  "time": 7.5,
+  "output": "results/runs/snapshot_k055_a0040_t075.npz",
+  "device": "cuda:0",
+  "allow_extrapolation": false
+}

@@ -1,0 +1,45 @@
+{
+  "dataset_root": "/rydata/duxinxu/landau-damping-surrogate-standardized/continuum_v1",
+  "parent_checkpoint": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_baseline/seed1/best.pt",
+  "solver": {
+    "field_solver": "ampere",
+    "moment_formulation": "primitive_central_n_u_p",
+    "dt": 0.002,
+    "maximum_mode": 8
+  },
+  "training": {
+    "batch_size": 16,
+    "tbptt_steps": 20,
+    "learning_rate": 0.000002,
+    "weight_decay": 0.000001,
+    "gradient_clip": 0.5,
+    "sampling": "balanced_regime_and_early_middle_late_time",
+    "curriculum": [
+      {"horizon_steps": 1000, "epochs": 1, "batches_per_epoch": 1},
+      {"horizon_steps": 2000, "epochs": 1, "batches_per_epoch": 1},
+      {"horizon_steps": 4000, "epochs": 2, "batches_per_epoch": 1}
+    ]
+  },
+  "validation": {
+    "horizon_steps": 4000,
+    "start_times": [5.0, 30.0, 60.0],
+    "selection_rule": "minimum finite 8-time-unit validation closed-loop composite score"
+  },
+  "stability_limits": {
+    "density_soft_floor": 0.75,
+    "pressure_soft_floor": 0.45,
+    "state_sigma_limit": 12.0,
+    "closure_rms_sigma_limit": 6.0
+  },
+  "loss_weights": {
+    "state": 10.0,
+    "electric": 1.0,
+    "energy": 0.1,
+    "supervised": 0.05,
+    "recovery": 0.1,
+    "positivity": 1.0,
+    "excursion": 0.02,
+    "spectral_tail": 0.005,
+    "closure_limit": 0.1
+  }
+}

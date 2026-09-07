@@ -1,0 +1,57 @@
+{
+  "data": {
+    "dataset_root": "/rydata/duxinxu/landau-damping-surrogate-standardized/continuum_v1",
+    "maximum_mode": 32,
+    "temporal_stride": 1,
+    "macro_stride": 5,
+    "delta_t_scale": 0.1,
+    "training_sample_stride": 1,
+    "validation_sample_stride": 10
+  },
+  "model": {
+    "kind": "fno",
+    "arguments": {
+      "history_steps": 1,
+      "state_channels": 4,
+      "width": 64,
+      "modes": 24,
+      "layers": 4,
+      "normalization": "group",
+      "activation": "gelu",
+      "zero_initialize_output": true
+    }
+  },
+  "projection": {
+    "preserve_mass": true,
+    "preserve_momentum": true,
+    "poisson_project_electric": true,
+    "maximum_mode": 32
+  },
+  "training": {
+    "batch_size": 128,
+    "validation_batch_size": 256,
+    "samples_per_epoch": 65536,
+    "regime_sampling_power": 0.5,
+    "rollout_curriculum": [
+      {"steps": 1, "epochs": 8},
+      {"steps": 4, "epochs": 8},
+      {"steps": 16, "epochs": 8}
+    ],
+    "validation_rollout_steps": 16,
+    "learning_rate": 0.0005,
+    "minimum_learning_rate": 0.00001,
+    "weight_decay": 0.000001,
+    "gradient_clip": 1.0,
+    "amp_bf16": true,
+    "torch_threads": 2
+  },
+  "loss_weights": {
+    "state": 1.0,
+    "spectral": 0.05,
+    "electric_mode": 0.05,
+    "energy": 0.05,
+    "positivity": 10.0,
+    "density_floor": 0.0001,
+    "pressure_floor": 0.00001
+  }
+}

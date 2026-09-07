@@ -1,0 +1,11 @@
+{
+  "training_overrides": {
+    "maximum_mode": 16,
+    "enforce_reflection": true,
+    "validation_reference": "unfiltered"
+  },
+  "numerical_gate": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_gate_formal_mode16.json",
+  "decision": "Retain mode 16 for formal accuracy because mode 8 fails the added 1% full-moment perturbation oracle criterion. Freeze exact reflection equivariance uniformly across A/B/C after its matched-checkpoint diagnostic improves completion 11/20 to 14/20. Mode 8 remains a possible later accuracy-speed tradeoff, not a passed accuracy setting.",
+  "diagnostic_root": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/diagnostics",
+  "test_used": false
+}

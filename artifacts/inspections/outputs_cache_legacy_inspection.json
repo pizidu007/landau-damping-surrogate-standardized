@@ -1,0 +1,51 @@
+{
+  "snapshot_contract": {
+    "status": "COMPLETE",
+    "version": "stage8d1a_deltaf_cache_x128_v193_v1",
+    "source_dataset_sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+    "normalization_sha256": "32bb83aaf35a9a750142c1e2484924686a9b98d5c3747205895cf5d5ad5491dc",
+    "sample_count": 3410,
+    "case_count": 110,
+    "field_shape": [
+      128,
+      193
+    ],
+    "x_stride": 4,
+    "v_stride": 8
+  },
+  "rollout_contract": {
+    "status": "COMPLETE",
+    "case_count": 110,
+    "phase_count": 31,
+    "pair_count": 3300,
+    "field_shape": [
+      128,
+      193
+    ],
+    "phase_time_start": 0.0,
+    "phase_time_end": 15.0,
+    "dt": 0.5,
+    "source_dataset_sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+    "normalization_sha256": "32bb83aaf35a9a750142c1e2484924686a9b98d5c3747205895cf5d5ad5491dc"
+  },
+  "root_attributes": {
+    "case_count": "110",
+    "coarsening_semantics": "exact strided subset of the frozen mother grid; not conservative averaging",
+    "created_at_utc": "2026-07-23T10:52:03.821107+00:00",
+    "dataset_version": "stage8d1a_deltaf_cache_x128_v193_v1",
+    "delta_global_rms": "0.0045277050162483975",
+    "field_shape_json": "[128, 193]",
+    "group_counts_json": "{\"boundary\": 310, \"interstitial\": 310, \"legacy\": 186, \"none\": 2170, \"validation\": 434}",
+    "normalization": "train_only_global_rms",
+    "normalization_sha256": "32bb83aaf35a9a750142c1e2484924686a9b98d5c3747205895cf5d5ad5491dc",
+    "normalization_stats": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8d0_representation_reader/stage8d0_formal_v1/normalization_stats.npz",
+    "representation": "delta_f0",
+    "sample_count": "3410",
+    "source_dataset": "/wangx/home/duxinxu/projects/landau-damping-surrogate/outputs/stage8c4_xv_master_110/stage8c4_xv_master_110_v1/landau_xv_master_110_v1.h5",
+    "source_dataset_sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+    "split_counts_json": "{\"test\": 806, \"train\": 2170, \"val\": 434}",
+    "status": "COMPLETE",
+    "v_stride": "8",
+    "x_stride": "4"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "purpose": "Small Gkeyll multi-case pilot for trajectory-wise FNO generalization",
+  "fixed": {
+    "nx": 64,
+    "nv": 64,
+    "velocity_range": [-6.0, 6.0],
+    "t_end": 40.0,
+    "output_dt": 0.005,
+    "basis": "serendipity",
+    "polynomial_order": 2,
+    "cfl_fraction": "0.525*k/0.35 (common internal dt≈0.0047)",
+    "distribution_frame_stride": 2000
+  },
+  "cases": [
+    {"k": 0.30, "alpha": 0.05, "split": "train"},
+    {"k": 0.30, "alpha": 0.075, "split": "validation"},
+    {"k": 0.30, "alpha": 0.10, "split": "train"},
+    {"k": 0.35, "alpha": 0.05, "split": "train"},
+    {"k": 0.35, "alpha": 0.075, "split": "test"},
+    {"k": 0.35, "alpha": 0.10, "split": "train", "reuse_strict_single": true},
+    {"k": 0.40, "alpha": 0.05, "split": "train"},
+    {"k": 0.40, "alpha": 0.075, "split": "train"},
+    {"k": 0.40, "alpha": 0.10, "split": "test"},
+    {"k": 0.45, "alpha": 0.05, "split": "validation"},
+    {"k": 0.45, "alpha": 0.075, "split": "train"},
+    {"k": 0.45, "alpha": 0.10, "split": "train"}
+  ]
+}

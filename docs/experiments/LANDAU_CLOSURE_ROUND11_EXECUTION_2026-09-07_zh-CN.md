@@ -1,0 +1,55 @@
+# Round 11 执行记录（2026-09-07）
+
+本轮已完成数值 oracle、历史跨度 pilot 和 A/B/C pilot，正式三个训练随机种子正在执行。实时状态由 `results/continuum_v1_closure_round11/RUN_STATUS.md` 更新；本文件记录已经完成的检查和冻结的设置。
+
+## 已完成的检查
+
+- 真实随时间变化的热流驱动流体系统：全部 20 条 validation 轨迹完成 t=0..80。mode 16、dt=0.02 相对未滤波矩场的最大扰动误差为 0.812%。
+- 比较 mode 8/16/24 与不同 dt，并用 float64 区分小时间步的单精度累计舍入误差。mode 8 虽改善部分神经闭环稳定性，但在代表案例上丢失的扰动信息达到 2.63%，因此正式精度对照保留 mode 16。
+- 冻结 A 检查点的反射等变诊断，将全程完成数从 11/20 提高到 14/20；正式 A/B/C 统一采用该物理约束。原始 pilot 及其源快照保留，不混称同一配置。
+- 61 项测试通过，包括完整窗口的梯度检查点一致性、因果历史、移除未来真值后的自主推进一致性、RK 中间状态检查、精度门失败时禁止开启盲测，以及“验证计时→冻结→盲测生成”的顺序。CUDA 冒烟测试覆盖训练和宽度缩减后的重训路径。
+
+## Pilot 结果
+
+| 输入 | 历史跨度 | 完成 t=80 | 本轮精度门 |
+|---|---:|---:|---|
+| A：当前 U + K | 0 | 11/20 | 未通过 |
+| B：历史 U + K | 0.5 | 12/20 | 未通过 |
+| B：历史 U + K | 2 | 14/20 | 未通过 |
+| B：历史 U + K | 5 | 12/20 | 未通过 |
+| C：历史 U + K + alpha | 2 | 15/20 | 未通过 |
+
+完成数的改善不等于非线性拟合已经达标。配对场能、相位和扰动误差见 `results/continuum_v1_closure_round11/reports/pilot/summary.json`。目前不足以确认 alpha 的稳定收益。此 A/B/C 对照没有移除 K 的实验，不能据此声称已经实证证明 K 输入的必要性。
+
+补充诊断对 A 的瞬时闭合在三个已有弱阻尼参数处作 Gauss 约束下的线性化。原 pilot 的 48 个“参数×空间模态”中，43 个存在超过 0.001 的正增长率；加入反射约束后仍有 38 个。最大增长率从 0.572 降至 0.352。正式 A 的早期 epoch 3 检查点仍存在高模态增长，需继续检查完整课程后的结果。数据及图见 `diagnostics/A_linearization.json` 和 `figures/A_linear_growth.png`。此检查只适用于瞬时 A，不能拿它直接判定带记忆 B/C 的稳定性，也不能单凭它证明非线性失败的唯一原因。
+
+如果本轮最终精度门失败，优先排查并约束弱扰动极限的较高空间模态响应，同时核查更长梯度窗口的收益；不要仅凭这些有限训练结果就认定必须加入 alpha 或增加演化矩数。
+
+## 正式设置与后续执行
+
+U=(n,u,p,E)，8 个因果历史槽和有效性标记，FNO width=128、4 层，直接预测零均值热流梯度。A/B/C 保持相同输入尺寸及主干；B/C 固定历史跨度 2。
+
+仅使用 139 train 和 20 validation。先监督训练 20 epochs，再进行 0.2、1、2 个物理时间单位的连续反传课程，每个 epoch 覆盖全部训练案例；先自由推进 5 个时间单位刷新历史，梯度窗口内部不 detach。三个种子共享原监督初始化，改变采样随机性。
+
+后续控制器已经启动等待：九个正式结果齐备并通过质量门后，进行闭合更新间隔 0.02/0.04/0.1 的微调、width=64 重训；再在已有 validation 案例 K=0.407、alpha=0.105 上重跑同 GPU 的 Gkeyll 基准，并计时所有达标神经候选，选择保留精度且实测最快的候选。随后冻结模型及源码，再生成并评估 12 个独立参数。若精度门失败，记录负结果并停止，不打开新盲测。当前尚无正式拟合成功或实际加速倍数的结论。
+
+主训练使用物理 GPU 5；独立诊断曾使用 GPU 2。新检查点、缓存、图和日志均在 Round 11 目录，既有原始数据及历史结果保留。
+
+## 恢复入口
+
+2026-09-07 19:20（北京时间）核查发现主控制器、训练进程及后续控制器均已不存在，但状态文件仍显示 running / waiting_for_formal；现有日志没有记录退出原因。此时正式九组中仅 A seed 0、1 完成（分别 14/20、16/20 条验证轨迹完成 t=80），A seed 2 已完成全部 11 个闭环训练 epoch，但候选全程验证尚未收尾，B/C 尚未开始。不能将此次进程退出视为正式实验完成。
+
+已保存旧状态和配置到 `control/recovery_20260907T192041/`，核对训练源快照 a89a8b4b9818 与当前源码哈希一致、正式配置完全一致，在 GPU 5 以独立后台会话恢复 A seed 2 的候选评估及后续六组实验。已完成的两组不重训；后续质量门控制器同步恢复等待。进度页增加主控制器及后续控制器的进程存活核对。退出原因仍未知。
+
+已有进程有文件锁，以下命令用于对应进程退出后的恢复。使用原输出路径时配置必须保持一致。
+
+```bash
+cd /wangx/home/duxinxu/projects/landau-damping-surrogate-standardized
+env CUDA_VISIBLE_DEVICES=5 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 PYTHONPATH=src taskset -c 0,1 /wangx/home/duxinxu/miniconda3/envs/landau-pic-surrogate/bin/python -u scripts/run_round11_closure_pipeline.py --formal-overrides results/continuum_v1_closure_round11/formal_overrides.json
+```
+
+后续控制器独立恢复：
+
+```bash
+env CUDA_VISIBLE_DEVICES=5 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 PYTHONPATH=src taskset -c 0,1 /wangx/home/duxinxu/miniconda3/envs/landau-pic-surrogate/bin/python -u scripts/run_round11_closure_postquality.py --gpu 5 --wait-for-formal
+```

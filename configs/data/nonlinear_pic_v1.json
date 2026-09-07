@@ -1,0 +1,98 @@
+{
+  "dataset_version": "nonlinear_cuda_pic_m03_v1",
+  "purpose": "Strong-nonlinear 1D1V Landau trajectories with dense M0-M3 closure labels and optional sparse phase-space frames.",
+  "profiles": {
+    "smoke": {
+      "solver": {
+        "field_nx": 64,
+        "n_x_load": 64,
+        "n_v_load": 256,
+        "dt": 0.1,
+        "t_end": 1.0,
+        "moment_dt": 0.1,
+        "phase_dt": 0.5,
+        "phase_nx": 64,
+        "phase_nv": 129,
+        "phase_v_min": -4.5,
+        "phase_v_max": 4.5,
+        "dtype": "float64"
+      },
+      "cases": [
+        {"k": 0.35, "alpha": 0.1, "seed": 0, "split": "smoke"}
+      ]
+    },
+    "pilot": {
+      "solver": {
+        "field_nx": 128,
+        "n_x_load": 512,
+        "n_v_load": 6400,
+        "dt": 0.05,
+        "t_end": 40.0,
+        "moment_dt": 0.1,
+        "phase_dt": 1.0,
+        "phase_nx": 256,
+        "phase_nv": 769,
+        "phase_v_min": -6.0,
+        "phase_v_max": 6.0,
+        "dtype": "float64"
+      },
+      "cases": [
+        {"k": 0.35, "alpha": 0.1, "seed": 0, "split": "test"},
+        {"k": 0.45, "alpha": 0.075, "seed": 0, "split": "train"},
+        {"k": 0.55, "alpha": 0.125, "seed": 0, "split": "validation"}
+      ]
+    },
+    "paper_match": {
+      "solver": {
+        "field_nx": 64,
+        "n_x_load": 1024,
+        "n_v_load": 25600,
+        "dt": 0.005,
+        "t_end": 40.0,
+        "moment_dt": 0.005,
+        "phase_dt": 1.0,
+        "phase_nx": 64,
+        "phase_nv": 129,
+        "phase_v_min": -6.0,
+        "phase_v_max": 6.0,
+        "dtype": "float64"
+      },
+      "cases": [
+        {"k": 0.35, "alpha": 0.1, "seed": 0, "split": "comparison"},
+        {"k": 0.35, "alpha": 0.1, "seed": 1, "split": "comparison"},
+        {"k": 0.35, "alpha": 0.1, "seed": 2, "split": "comparison"}
+      ]
+    },
+    "formal": {
+      "solver": {
+        "field_nx": 128,
+        "n_x_load": 1024,
+        "n_v_load": 25600,
+        "dt": 0.05,
+        "t_end": 60.0,
+        "moment_dt": 0.1,
+        "phase_dt": 1.0,
+        "phase_nx": 512,
+        "phase_nv": 1537,
+        "phase_v_min": -6.0,
+        "phase_v_max": 6.0,
+        "dtype": "float64"
+      },
+      "case_grid": {
+        "k_values": [0.3, 0.35, 0.4, 0.45, 0.55],
+        "alpha_values": [0.05, 0.075, 0.1, 0.125],
+        "seeds": [0, 1, 2]
+      },
+      "split_pairs": {
+        "validation": [
+          [0.3, 0.075], [0.35, 0.125], [0.4, 0.05],
+          [0.45, 0.125], [0.55, 0.075]
+        ],
+        "test": [
+          [0.3, 0.125], [0.35, 0.1], [0.4, 0.075],
+          [0.45, 0.1], [0.55, 0.05]
+        ]
+      }
+    }
+  }
+}

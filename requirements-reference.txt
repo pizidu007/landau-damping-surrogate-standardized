@@ -1,0 +1,10 @@
+
+# Environment used for the formal 2026 experiments (reference only).
+python==3.11.13
+torch==2.5.1+cu121
+numpy==1.26.4
+h5py==3.10.0
+scipy==1.11.4
+matplotlib==3.8.4
+numba==0.59.1
+pytest==9.1.1

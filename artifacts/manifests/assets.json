@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "project": "landau-damping-surrogate-standardized",
+  "generated_from": "landau-damping-surrogate-refactored",
+  "assets": [
+    {
+      "id": "historical_exact_cache",
+      "path": "data/processed/historical_exact/landau_deltaf_cache_x128_v193_v1.h5",
+      "external_path": "processed/historical_exact/landau_deltaf_cache_x128_v193_v1.h5",
+      "size_bytes": 186152364,
+      "sha256": "84fd51e09e3898555a690aef3df57625f48bc374dab3a27fa5856cf750801a2c",
+      "role": "Exact-stride cache used by the existing snapshot and rollout checkpoints."
+    },
+    {
+      "id": "conservative_m02_cache",
+      "path": "data/processed/conservative_m02/landau_deltaf_cache_x128_v193_conservative_m02_v2.h5",
+      "external_path": "processed/conservative_m02/landau_deltaf_cache_x128_v193_conservative_m02_v2.h5",
+      "size_bytes": 271364016,
+      "sha256": "f00a6618a29c96a9f4e1c5cfea5d3372656fd925355678eecf907b3332892236",
+      "role": "M0/M2-conservative cache for closure audits and future retraining."
+    },
+    {
+      "id": "mother_pic_110",
+      "path": "data/raw/landau_xv_master_110_v1.h5",
+      "external_path": "raw/pic/landau_xv_master_110_v1.h5",
+      "size_bytes": 4667797193,
+      "sha256": "f92b58323b627ed526c29028abc0da0869173f6c380e8df4b76f424f89d1c722",
+      "role": "Full-resolution 110-case CUDA-PIC mother dataset."
+    },
+    {
+      "id": "snapshot_checkpoint",
+      "path": "models/snapshot/snapshot_best.pt",
+      "size_bytes": 34299788,
+      "sha256": "a45058a899d7338ef0acbf398dac02e61ffab4c164c123d84382b2265889984b",
+      "role": "Frozen direct snapshot model."
+    },
+    {
+      "id": "rollout_positivity_checkpoint",
+      "path": "models/rollout/rollout_positivity_best.pt",
+      "size_bytes": 68599602,
+      "sha256": "b94434678c1a1cdd8d22e5e94b4bfa2ba2ddfc2ba8b7fc4e0acded76c9077dd5",
+      "role": "Frozen Stage 9B positivity-constrained rollout model containing stepper and snapshot-anchor weights."
+    },
+    {
+      "id": "pic_heat_flux_closure_checkpoint",
+      "path": "models/closure/closure_fno_pic_v1.pt",
+      "size_bytes": 1829624,
+      "sha256": "6d2628f0b98ffaf5d528a767ba0706cca29761611c2190eeca2ac8d285c71cdc",
+      "role": "Frozen PIC-trained FNO heat-flux checkpoint after short fluid-rollout fine tuning."
+    }
+  ],
+  "reference_results": [
+    {
+      "id": "smoke_snapshot_npz",
+      "path": "results/smoke/snapshot_k055_a0040_t075.npz",
+      "size_bytes": 469874,
+      "sha256": "647548fe234a6fc55379a3691ac6b5e08bdc5de7b67fc234d2144a2fe6680ba4",
+      "role": "Validated snapshot inference output."
+    },
+    {
+      "id": "smoke_snapshot_metadata",
+      "path": "results/smoke/snapshot_k055_a0040_t075.npz.json",
+      "size_bytes": 679,
+      "sha256": "b698588f050b7a39efd813540df2542bb784f46e68f71a215e4d43b7c4503090",
+      "role": "Metadata for the validated snapshot output."
+    },
+    {
+      "id": "smoke_test_rollout_npz",
+      "path": "results/smoke/stage9b_test_case0_rollout.npz",
+      "size_bytes": 9786791,
+      "sha256": "6ca4a6fbdb99333fef2188ac432070226541f2e610b3abb7e7f783194f0841f1",
+      "role": "Validated 30-step Stage 9B test-case rollout."
+    },
+    {
+      "id": "smoke_test_rollout_metadata",
+      "path": "results/smoke/stage9b_test_case0_rollout.npz.json",
+      "size_bytes": 1122,
+      "sha256": "e747c875a4d3d9395fe2de8f07ce7f8bf7cbea8342b1edff7bab06ab06fff1c2",
+      "role": "Metadata for the validated test-case rollout."
+    },
+    {
+      "id": "smoke_validation_rollout_npz",
+      "path": "results/smoke/stage9b_val_case0_regression.npz",
+      "size_bytes": 10329902,
+      "sha256": "816240832575786745170088201f6188a8f23c9103cf33a92333d77d5afa3d94",
+      "role": "Validated Stage 9B validation-case regression rollout."
+    },
+    {
+      "id": "smoke_validation_rollout_metadata",
+      "path": "results/smoke/stage9b_val_case0_regression.npz.json",
+      "size_bytes": 1119,
+      "sha256": "602646c488ca9a79898b7e4d6df00ad8df3c150b6039a046d4bc998626f24bb8",
+      "role": "Metadata for the validated validation-case rollout."
+    },
+    {
+      "id": "closure_study_summary",
+      "path": "results/closure_fno_v1/final_report/study_summary.json",
+      "size_bytes": 3734,
+      "sha256": "be5ca658f4296851e1b45400df02e72a0d1b7534d3cc4312e1477d90e66baaff",
+      "role": "Machine-readable sealed-test summary for the PIC heat-flux closure study."
+    },
+    {
+      "id": "closure_visualization_manifest",
+      "path": "results/closure_fno_v1/final_visualizations/visualization_manifest.json",
+      "size_bytes": 157,
+      "sha256": "22e159057bbcb170ef47ab8c46132e64d3b7dd8a5672ee002ec4780a65c1d049",
+      "role": "Manifest for the four final closure visualization groups."
+    }
+  ],
+  "source_references": [
+    {
+      "id": "github_upstream_archive_9490dbf",
+      "path": "reference/upstream/landau-damping-surrogate-9490dbf.tar.gz",
+      "size_bytes": 3691697,
+      "sha256": "6915badd11df9702b85d448be779c48f1d2120f82745625bc5dbdd1d6188da11",
+      "role": "Pinned archive of the immediate GitHub upstream at commit 9490dbf."
+    }
+  ],
+  "compatibility": {
+    "snapshot_checkpoint_cache": "historical_exact_cache",
+    "rollout_checkpoint_cache": "historical_exact_cache",
+    "pic_heat_flux_closure_dataset": "nonlinear_cuda_pic_m03_v1",
+    "pic_heat_flux_closure_hp_blend": 0.75,
+    "conservative_cache_is_drop_in_checkpoint_cache": false
+  }
+}

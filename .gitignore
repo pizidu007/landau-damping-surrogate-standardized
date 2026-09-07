@@ -1,0 +1,75 @@
+# Python build and cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+venv/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local credentials and machine settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+configs/paths.local.toml
+
+# Scientific data and checkpoints stay on the shared server, including
+# assets written outside data/ or models/ by historical experiments.
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.gkyl
+*.bp
+*.pkl
+*.pickle
+/data/*
+!/data/README.md
+!/data/raw/
+/data/raw/*
+!/data/raw/README.md
+
+# Generated experiment outputs and logs (documentation stays in Git)
+/results/*
+!/results/README.md
+!/results/runs/
+/results/runs/*
+!/results/runs/README.md
+!/results/continuum_v1_closure_round11/
+/results/continuum_v1_closure_round11/*
+!/results/continuum_v1_closure_round11/formal_overrides.json
+!/results/closure_fno_v1/
+/results/closure_fno_v1/*
+!/results/closure_fno_v1/final_report/
+/results/closure_fno_v1/final_report/*
+!/results/closure_fno_v1/final_report/REPORT.md
+!/results/closure_fno_v1/final_report/study_summary.json
+/logs/*
+!/logs/README.md
+*.log
+*.out
+*.err
+
+# Generated presentations, rendered reports and publication screenshots
+/reports/
+/docs/reports/*.docx
+/docs/reports/GKEYLL_FNO_PUBLIC_IMAGE_LINKS.json
+
+# Temporary files
+*.tmp
+*.prof

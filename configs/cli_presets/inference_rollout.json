@@ -1,0 +1,13 @@
+{
+  "entrypoint": "scripts/infer_rollout.py",
+  "checkpoint": "models/rollout/rollout_positivity_best.pt",
+  "cache": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/processed/historical_exact/landau_deltaf_cache_x128_v193_v1.h5",
+  "cache_split": "test",
+  "cache_split_position": 0,
+  "cache_time_index": 0,
+  "steps": 30,
+  "amp": "bf16",
+  "output": "results/runs/test_case0_rollout.npz",
+  "device": "cuda:0",
+  "allow_extrapolation": false
+}

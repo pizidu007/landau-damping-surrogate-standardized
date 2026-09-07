@@ -1,0 +1,33 @@
+{
+  "purpose": "Huang 2025 strict single-trajectory reproduction using newly generated central moments",
+  "source": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/gkeyll/paper_match_single_v1/processed/huang2025_k0p35_a0p10_t40.h5",
+  "moment_definition": {
+    "inputs": ["density", "velocity", "central_pressure"],
+    "target": "spatial_gradient_of_central_heat_flux",
+    "note": "This follows Huang Eq. 3 and differs from the ambiguous exported raw M2/M3 in the public MAT file."
+  },
+  "offline": {
+    "protocols": ["paper_like", "causal"],
+    "paper_like_split": "first 8000 frames interleaved 8/1/1",
+    "causal_split": "t≈[0,24)/[24,30)/[30,40)",
+    "model": {"type": "FNO1d", "width": 64, "modes": 24, "layers": 4},
+    "epochs": 100,
+    "batch_size": 256,
+    "learning_rate": 0.002,
+    "seed": 0
+  },
+  "closed_loop": {
+    "moment_formulation": "primitive",
+    "field_solver": "ampere",
+    "integrator": "RK4",
+    "dt": 0.002,
+    "maximum_mode": 24,
+    "max_time": 40.0
+  },
+  "acceptance": {
+    "offline_paper_like_relative_l2": 0.01,
+    "offline_causal_test_relative_l2": 0.20,
+    "closed_loop_completed_time": 40.0,
+    "closed_loop_field_energy_log10_rmse": 0.30
+  }
+}

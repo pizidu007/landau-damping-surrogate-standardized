@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "role": "immediate_upstream_reference",
+  "repository": "https://github.com/kaneman777/landau-damping-surrogate",
+  "branch": "main",
+  "commit": "9490dbff6b322bf7f43bbcff49af48bb9ff65fd7",
+  "commit_short": "9490dbf",
+  "commit_author_date": "2026-03-23 16:29:27 +0900",
+  "commit_subject": "Add README comparison section with representative MLP plots",
+  "retrieved_on": "2026-08-27",
+  "tracked_file_count": 50,
+  "expanded_snapshot": "reference/upstream/landau-damping-surrogate-original",
+  "archive": {
+    "path": "reference/upstream/landau-damping-surrogate-9490dbf.tar.gz",
+    "size_bytes": 3691697,
+    "sha256": "6915badd11df9702b85d448be779c48f1d2120f82745625bc5dbdd1d6188da11"
+  },
+  "license": {
+    "file": "reference/upstream/landau-damping-surrogate-original/LICENSE.md",
+    "identified_as": "GNU GPL v3",
+    "note": "The upstream README says MIT, but the tracked LICENSE.md contains GNU GPL v3. This project follows the actual license file."
+  },
+  "upstream_of_upstream": {
+    "repository": "https://github.com/antoinelpp/1d-pic-electrostatic",
+    "role": "original 1D electrostatic PIC implementation"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "dataset": {
+    "run_dir": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/nonlinear/runs/nonlinear_formal_v1",
+    "average_seeds": true,
+    "time_stride": 2,
+    "sealed_test_split": true
+  },
+  "label_audit": {
+    "recommended_maximum_mode": 24,
+    "reason": "Three-seed signal exceeds inter-seed noise in the aggregate spectrum through mode 23."
+  },
+  "supervised": {
+    "variants": ["nup", "nupk", "nupk_q", "nupk_history"],
+    "seeds": [0, 1, 2],
+    "epochs": 30,
+    "batch_size": 128,
+    "width": 48,
+    "modes": 24,
+    "layers": 4,
+    "learning_rate": 0.002,
+    "spectral_weight": 0.1,
+    "gradient_weight": 0.5,
+    "selection_metric": "validation_pair_macro_relative_l2"
+  },
+  "rollout": {
+    "integrator": "RK4",
+    "moment_interval": 0.1,
+    "substep_dt": 0.02,
+    "maximum_mode": 24,
+    "density_floor": 0.0001,
+    "pressure_floor": 0.00001
+  },
+  "rollout_finetune": {
+    "epochs": 6,
+    "windows_per_epoch": 128,
+    "batch_size": 8,
+    "window": 2,
+    "learning_rate": 0.00001,
+    "closure_teacher_weight": 0.2
+  }
+}

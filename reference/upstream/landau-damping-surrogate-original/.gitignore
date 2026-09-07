@@ -1,0 +1,96 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+.ipynb_checkpoints/
+
+.pytest*
+
+*.dat
+
+# Ropeproject
+.ropeproject
+
+# Development files
+dev.ipynb
+
+*.h5
+
+# --- Project-specific: large / regenerable data (do not commit) ---
+*.npy
+*.csv
+data/
+output_data/
+cases/
+sweep_2d_results/
+
+# Plot outputs (regenerate with main.py / training scripts)
+output_plots/
+*.png
+*.jpg
+*.pdf
+
+# Saved model weights & normalization tensors (retrain to reproduce)
+*.pth
+surrogate/models/
+
+# Profiling
+program.prof
+
+# Virtual environments
+venv/
+.env
+.venv/

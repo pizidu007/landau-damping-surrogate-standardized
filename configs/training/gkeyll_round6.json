@@ -1,0 +1,40 @@
+{
+  "round": "gkeyll_strict_single_round6",
+  "case": {
+    "k": 0.35,
+    "alpha": 0.10,
+    "trajectory": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/gkeyll/paper_match_single_v1/processed/huang2025_k0p35_a0p10_t40.h5",
+    "moment_definition": "central"
+  },
+  "solver": {
+    "formulation": "primitive",
+    "field": "ampere",
+    "integrator": "RK4",
+    "dt": 0.002,
+    "first_step_closure": "truth"
+  },
+  "architecture_screen": {
+    "width": 64,
+    "layers": 4,
+    "epochs": 100,
+    "seeds": [0, 1],
+    "variants": [
+      {"id": "A0", "normalization": "group", "activation": "gelu", "modes": 24},
+      {"id": "A1", "normalization": "none", "activation": "gelu", "modes": 24},
+      {"id": "A2", "normalization": "none", "activation": "relu", "modes": 24},
+      {"id": "A3", "normalization": "group", "activation": "gelu", "modes": 8},
+      {"id": "A4", "normalization": "none", "activation": "gelu", "modes": 8},
+      {"id": "A5", "normalization": "none", "activation": "relu", "modes": 8},
+      {"id": "A6", "normalization": "none", "activation": "relu", "modes": 12},
+      {"id": "A7", "normalization": "none", "activation": "relu", "modes": 16}
+    ]
+  },
+  "acceptance": {
+    "field_energy_log10_rmse": 0.15,
+    "density_relative_l2": 0.005,
+    "velocity_relative_l2": 0.08,
+    "pressure_relative_l2": 0.015,
+    "free_path_closure_relative_l2": 0.20,
+    "one_percent_state_error_time": 20.0
+  }
+}

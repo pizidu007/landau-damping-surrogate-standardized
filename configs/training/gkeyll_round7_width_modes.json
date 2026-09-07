@@ -1,0 +1,26 @@
+{
+  "round": "gkeyll_strict_single_round7_width_modes",
+  "fixed": {
+    "trajectory": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/gkeyll/paper_match_single_v1/processed/huang2025_k0p35_a0p10_t40.h5",
+    "layers": 4,
+    "normalization": "none",
+    "activation": "relu",
+    "protocol": "paper_full",
+    "epochs": 100,
+    "batch_size": 256,
+    "deployment_maximum_mode": 8,
+    "closed_loop_screen_time": 10.0
+  },
+  "grid": {
+    "width": [32, 48, 64, 96, 128],
+    "modes": [8, 12, 16, 24, 32]
+  },
+  "selection": {
+    "first_pass_seed": 0,
+    "refine_top_k": 5,
+    "refine_seeds": [1, 2],
+    "final_top_k": 2,
+    "primary_metric": "median_t10_field_energy_log10_rmse",
+    "reject_if_clamped": true
+  }
+}

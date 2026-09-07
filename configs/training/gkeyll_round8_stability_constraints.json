@@ -1,0 +1,64 @@
+{
+  "round": "gkeyll_strict_single_round8_stability_constraints",
+  "fixed": {
+    "trajectory": "/wangx/home/duxinxu/datasets/landau-damping-surrogate-standardized/gkeyll/paper_match_single_v1/processed/huang2025_k0p35_a0p10_t40.h5",
+    "width": 128,
+    "internal_modes": 32,
+    "layers": 4,
+    "normalization": "none",
+    "activation": "relu",
+    "protocol": "paper_full",
+    "epochs": 100,
+    "batch_size": 256,
+    "deployment_mode": 8,
+    "seeds": [0, 1, 2]
+  },
+  "variants": {
+    "C0_baseline": {
+      "reuse_round7": true,
+      "supervised_loss_weight": 1.0,
+      "deployment_loss_weight": 0.0,
+      "consistency_weight": 0.0,
+      "selection_metric": "full"
+    },
+    "C1_balanced": {
+      "supervised_loss_weight": 1.0,
+      "deployment_loss_weight": 1.0,
+      "consistency_weight": 0.1,
+      "selection_metric": "deployment"
+    },
+    "C2_deployment_focused": {
+      "supervised_loss_weight": 0.25,
+      "deployment_loss_weight": 1.0,
+      "consistency_weight": 0.25,
+      "selection_metric": "deployment"
+    },
+    "C3_deployment_only": {
+      "supervised_loss_weight": 0.0,
+      "deployment_loss_weight": 1.0,
+      "consistency_weight": 0.0,
+      "selection_metric": "deployment"
+    },
+    "C4_physics_work": {
+      "supervised_loss_weight": 1.0,
+      "deployment_loss_weight": 1.0,
+      "consistency_weight": 0.1,
+      "closure_work_weight": 0.05,
+      "closure_rms_weight": 0.05,
+      "selection_metric": "deployment"
+    }
+  },
+  "selection": {
+    "screen_time": 10.0,
+    "final_time": 40.0,
+    "primary_metric": "median_t40_field_energy_log10_rmse",
+    "secondary_metric": "t40_seed_range",
+    "reject_if_clamped": true
+  },
+  "paper_aligned_comparison": {
+    "columns": ["Gkeyll truth", "Fluid + HP", "Fluid + FNO"],
+    "hp_scale": 1.5957691216057308,
+    "hp_definition": "dqdx_k = sqrt(8/pi) * |k| * (p-n)_k",
+    "include_rollout_finetuning": false
+  }
+}
