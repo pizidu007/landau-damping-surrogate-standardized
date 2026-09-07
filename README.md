@@ -6,7 +6,14 @@
 
 ## 新成员从这里开始
 
-请先阅读[协作与共享服务器入门](docs/operations/COLLABORATION_zh-CN.md)。Git 仓库包含源码、配置、测试、文档和来源记录；正式数据、模型权重、实验输出和生成的演示文件保留在共享服务器。下文资产清单和结果链接描述的是完整服务器工作目录，刚克隆的仓库需要先连接对应资产。
+第一次接触项目，请从[新成员学习路线](docs/onboarding/README.md)开始，不需要先读完历史报告或运行大规模训练：
+
+1. [背景与核心概念](docs/onboarding/01_BACKGROUND_zh-CN.md)：从分布函数、Landau 阻尼、矩与热流，讲到为什么需要神经闭合。
+2. [项目逻辑与代码地图](docs/onboarding/02_PROJECT_LOGIC_zh-CN.md)：区分各条模型路线，解释数据、训练、自由推进和研究阶段的关系。
+3. [任务定义与验收标准](docs/onboarding/03_TASK_DEFINITIONS_zh-CN.md)：输入输出、数组形状、A/B/C 对照、数据使用边界、指标与交付物。
+4. [术语与符号速查](docs/onboarding/04_GLOSSARY_zh-CN.md)：遇到不熟悉的缩写或符号时查阅。
+
+准备动手时，再读[协作与共享服务器入门](docs/operations/COLLABORATION_zh-CN.md)。Git 仓库包含源码、配置、测试、文档和来源记录；正式数据、模型权重、实验输出和生成的演示文件保留在共享服务器。下文资产清单和结果链接描述的是完整服务器工作目录，刚克隆的仓库需要先连接对应资产。
 
 当前研究已扩展至 Gkeyll 连续体参考数据和具有历史输入的流体热流闭合；最新实验口径见 [Round 11 协议](docs/experiments/LANDAU_CLOSURE_ROUND11_PROTOCOL_zh-CN.md)。下文的 Snapshot/Rollout 指标属于较早分支，不代表 Round 11 的结果。
 

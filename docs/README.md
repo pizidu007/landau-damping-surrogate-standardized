@@ -1,5 +1,14 @@
 # 文档索引
 
+## 新成员先读
+
+从[新成员学习路线](onboarding/README.md)开始。该入口提供阅读顺序、贯穿示例、CPU 入门练习和第一项任务的交付标准。
+
+- [背景与核心概念](onboarding/01_BACKGROUND_zh-CN.md)：分布函数、Landau 阻尼、无量纲参数、矩方程、热流闭合与 FNO。
+- [项目逻辑与代码地图](onboarding/02_PROJECT_LOGIC_zh-CN.md)：历史路线与当前任务、数据流、训练/部署流程、研究阶段和代码入口。
+- [任务定义与验收标准](onboarding/03_TASK_DEFINITIONS_zh-CN.md)：输入输出合同、A/B/C 对照、因果历史、评价指标、质量门和实验交付模板。
+- [术语与符号速查](onboarding/04_GLOSSARY_zh-CN.md)：物理、数值、机器学习与研究评价术语。
+
 ## 科学说明
 
 - `science/METHOD.md`：表示、FNO、递归训练、mean anchor 与正性目标。
