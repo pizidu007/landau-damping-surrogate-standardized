@@ -76,5 +76,6 @@ configs/paths.local.toml
 /docs/reports/GKEYLL_FNO_PUBLIC_IMAGE_LINKS.json
 
 # Temporary files
+/deliverables/
 *.tmp
 *.prof

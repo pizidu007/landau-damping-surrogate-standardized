@@ -10,6 +10,9 @@
 可以先浏览[关键结果与看图指南](../results/KEY_RESULTS_zh-CN.md)，带着具体图表再学习下面的概念。
 [checkpoint 指南](../results/CHECKPOINTS_zh-CN.md)提供无需训练数据的第一次 CPU 推理练习。
 
+使用个人 PC 研究 FNO + SSM 残差闭合时，先看[实验包的简明首页](PC_KIT_README_zh-CN.md)，
+再按需查阅[数据合同与路线说明](05_PC_FNO_SSM_TASK_zh-CN.md)。实验包由项目负责人直接转交。
+
 ## 按什么顺序读
 
 | 顺序 | 文档 | 读完应该能回答 |
