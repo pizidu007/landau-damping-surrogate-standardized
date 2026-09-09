@@ -19,6 +19,8 @@ def main():
     p.add_argument("--maximum-mode",type=int)
     p.add_argument("--dt",type=float)
     p.add_argument("--closure-interval",type=float)
+    p.add_argument("--data-root",type=Path,help="Override the shared continuum dataset location.")
+    p.add_argument("--cache-dir",type=Path,help="Use a personal derived-cache directory.")
     p.add_argument("--device",default="cuda:0")
     args=p.parse_args()
     if (args.output_dir/"summary.json").exists():
@@ -29,6 +31,8 @@ def main():
     torch.cuda.set_per_process_memory_fraction(.15,device)
     checkpoint=torch.load(args.checkpoint,map_location=device,weights_only=False)
     config=dict(checkpoint["config"])
+    if args.data_root is not None:config["dataset_root"]=str(args.data_root.resolve())
+    if args.cache_dir is not None:config["cache_dir"]=str(args.cache_dir.resolve())
     if args.enforce_reflection:config["enforce_reflection"]=True
     if args.dt is not None:config["dt"]=args.dt
     if args.closure_interval is not None:config["closure_interval"]=args.closure_interval

@@ -1,0 +1,1229 @@
+{
+  "stage": "continuum_v1_macrostep_round10_validation_summary",
+  "selection_split": "validation",
+  "diagnostic_test_opened": false,
+  "required_seed_count": 3,
+  "arms": {
+    "fno_single": {
+      "completed_seed_count": 3,
+      "seeds": [
+        {
+          "seed": 0,
+          "best_epoch": 24,
+          "short_validation_relative_l2": 0.01750116684131337,
+          "parameter_count": 415300,
+          "training_wall_seconds": 1759.7072021160275,
+          "rollout_wall_seconds": 9.511282550171018,
+          "model_calls": 800,
+          "complete_case_count": 20,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.7036280605173973,
+              "state_relative_l2_median": 0.13469914912798786,
+              "state_perturbation_relative_l2_median": 1.4088718237672584
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.6132981995098501,
+              "state_relative_l2_median": 0.07797920990898641,
+              "state_perturbation_relative_l2_median": 0.6073003708719612
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 1.7824832143709268,
+              "state_relative_l2_median": 0.007247994615873674,
+              "state_perturbation_relative_l2_median": 0.6489349244781879
+            }
+          },
+          "field_energy_log10_rmse_median": 0.7173309323367036,
+          "field_energy_log10_rmse_mean": 0.91524805392111,
+          "state_relative_l2_median": 0.10486748354256398,
+          "state_relative_l2_mean": 0.11825903726526892,
+          "state_perturbation_relative_l2_median": 1.1325107827900451,
+          "state_perturbation_relative_l2_mean": 1.4003282515031896,
+          "electric_mode_one_amplitude_relative_l2_median": 0.40814817738399356,
+          "electric_mode_one_phase_mae_radians_median": 0.8782083671847548,
+          "total_energy_max_relative_drift_median": 0.20108339753893437,
+          "wall_speedup_vs_closure": 69.48532316820538,
+          "model_call_reduction_vs_closure": 199.995,
+          "field_energy_improvement_vs_closure": 0.11912208809724678
+        },
+        {
+          "seed": 1,
+          "best_epoch": 23,
+          "short_validation_relative_l2": 0.017488044935316183,
+          "parameter_count": 415300,
+          "training_wall_seconds": 3330.4876557248645,
+          "rollout_wall_seconds": 22.557422086130828,
+          "model_calls": 800,
+          "complete_case_count": 20,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.7710101430422333,
+              "state_relative_l2_median": 0.058587989272688344,
+              "state_perturbation_relative_l2_median": 0.6133856517003816
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.7558842300432547,
+              "state_relative_l2_median": 0.08637435670306569,
+              "state_perturbation_relative_l2_median": 1.0804089821355458
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 2.6291878229234897,
+              "state_relative_l2_median": 0.020509579820875375,
+              "state_perturbation_relative_l2_median": 1.869898209265291
+            }
+          },
+          "field_energy_log10_rmse_median": 0.7789243110597193,
+          "field_energy_log10_rmse_mean": 1.0545512915602537,
+          "state_relative_l2_median": 0.04538619980487374,
+          "state_relative_l2_mean": 0.30041486777163934,
+          "state_perturbation_relative_l2_median": 0.9969497117756468,
+          "state_perturbation_relative_l2_mean": 2.307468993079682,
+          "electric_mode_one_amplitude_relative_l2_median": 0.43303764791210975,
+          "electric_mode_one_phase_mae_radians_median": 0.8289922656836783,
+          "total_energy_max_relative_drift_median": 0.016186261888789327,
+          "wall_speedup_vs_closure": 29.298318718302887,
+          "model_call_reduction_vs_closure": 199.995,
+          "field_energy_improvement_vs_closure": 0.04348580309859784
+        },
+        {
+          "seed": 2,
+          "best_epoch": 24,
+          "short_validation_relative_l2": 0.017263067829462256,
+          "parameter_count": 415300,
+          "training_wall_seconds": 3193.645310862921,
+          "rollout_wall_seconds": 15.753271226305515,
+          "model_calls": 800,
+          "complete_case_count": 20,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.6963135148199275,
+              "state_relative_l2_median": 0.05016777092971407,
+              "state_perturbation_relative_l2_median": 0.6356364992771829
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.921508303648005,
+              "state_relative_l2_median": 0.050157938783064945,
+              "state_perturbation_relative_l2_median": 0.7913096763139607
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 1.7626472106519417,
+              "state_relative_l2_median": 0.022047836893464574,
+              "state_perturbation_relative_l2_median": 1.6586835440598966
+            }
+          },
+          "field_energy_log10_rmse_median": 0.892070214161578,
+          "field_energy_log10_rmse_mean": 0.9558815022747064,
+          "state_relative_l2_median": 0.04431789883010573,
+          "state_relative_l2_mean": 0.05704397532596846,
+          "state_perturbation_relative_l2_median": 0.7237481180066851,
+          "state_perturbation_relative_l2_mean": 0.8209504815913821,
+          "electric_mode_one_amplitude_relative_l2_median": 0.3545109462912408,
+          "electric_mode_one_phase_mae_radians_median": 0.8925603144946659,
+          "total_energy_max_relative_drift_median": 0.04256577506447451,
+          "wall_speedup_vs_closure": 41.95284472974443,
+          "model_call_reduction_vs_closure": 199.995,
+          "field_energy_improvement_vs_closure": -0.09545666037505882
+        }
+      ],
+      "aggregate": {
+        "short_validation_relative_l2": {
+          "values": [
+            0.01750116684131337,
+            0.017488044935316183,
+            0.017263067829462256
+          ],
+          "median": 0.017488044935316183,
+          "mean": 0.017417426535363937,
+          "minimum": 0.017263067829462256,
+          "maximum": 0.01750116684131337
+        },
+        "field_energy_log10_rmse_median": {
+          "values": [
+            0.7173309323367036,
+            0.7789243110597193,
+            0.892070214161578
+          ],
+          "median": 0.7789243110597193,
+          "mean": 0.7961084858526669,
+          "minimum": 0.7173309323367036,
+          "maximum": 0.892070214161578
+        },
+        "field_energy_log10_rmse_mean": {
+          "values": [
+            0.91524805392111,
+            1.0545512915602537,
+            0.9558815022747064
+          ],
+          "median": 0.9558815022747064,
+          "mean": 0.9752269492520234,
+          "minimum": 0.91524805392111,
+          "maximum": 1.0545512915602537
+        },
+        "state_relative_l2_median": {
+          "values": [
+            0.10486748354256398,
+            0.04538619980487374,
+            0.04431789883010573
+          ],
+          "median": 0.04538619980487374,
+          "mean": 0.06485719405918115,
+          "minimum": 0.04431789883010573,
+          "maximum": 0.10486748354256398
+        },
+        "state_relative_l2_mean": {
+          "values": [
+            0.11825903726526892,
+            0.30041486777163934,
+            0.05704397532596846
+          ],
+          "median": 0.11825903726526892,
+          "mean": 0.15857262678762557,
+          "minimum": 0.05704397532596846,
+          "maximum": 0.30041486777163934
+        },
+        "state_perturbation_relative_l2_median": {
+          "values": [
+            1.1325107827900451,
+            0.9969497117756468,
+            0.7237481180066851
+          ],
+          "median": 0.9969497117756468,
+          "mean": 0.9510695375241257,
+          "minimum": 0.7237481180066851,
+          "maximum": 1.1325107827900451
+        },
+        "state_perturbation_relative_l2_mean": {
+          "values": [
+            1.4003282515031896,
+            2.307468993079682,
+            0.8209504815913821
+          ],
+          "median": 1.4003282515031896,
+          "mean": 1.5095825753914178,
+          "minimum": 0.8209504815913821,
+          "maximum": 2.307468993079682
+        },
+        "electric_mode_one_amplitude_relative_l2_median": {
+          "values": [
+            0.40814817738399356,
+            0.43303764791210975,
+            0.3545109462912408
+          ],
+          "median": 0.40814817738399356,
+          "mean": 0.3985655905291147,
+          "minimum": 0.3545109462912408,
+          "maximum": 0.43303764791210975
+        },
+        "electric_mode_one_phase_mae_radians_median": {
+          "values": [
+            0.8782083671847548,
+            0.8289922656836783,
+            0.8925603144946659
+          ],
+          "median": 0.8782083671847548,
+          "mean": 0.8665869824543663,
+          "minimum": 0.8289922656836783,
+          "maximum": 0.8925603144946659
+        },
+        "total_energy_max_relative_drift_median": {
+          "values": [
+            0.20108339753893437,
+            0.016186261888789327,
+            0.04256577506447451
+          ],
+          "median": 0.04256577506447451,
+          "mean": 0.0866118114973994,
+          "minimum": 0.016186261888789327,
+          "maximum": 0.20108339753893437
+        },
+        "all_complete": true,
+        "all_violation_free": true
+      }
+    },
+    "fno_history4": {
+      "completed_seed_count": 3,
+      "seeds": [
+        {
+          "seed": 0,
+          "best_epoch": 22,
+          "short_validation_relative_l2": 0.014625906587357579,
+          "parameter_count": 416068,
+          "training_wall_seconds": 2287.431141869165,
+          "rollout_wall_seconds": 11.695887885987759,
+          "model_calls": 797,
+          "complete_case_count": 20,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.7480833303992382,
+              "state_relative_l2_median": 0.0696288833020422,
+              "state_perturbation_relative_l2_median": 0.8369342383254421
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.7108027668142205,
+              "state_relative_l2_median": 0.08138603247908185,
+              "state_perturbation_relative_l2_median": 1.1134650517321145
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 3.639225917829875,
+              "state_relative_l2_median": 0.09799350059238641,
+              "state_perturbation_relative_l2_median": 8.716458587922572
+            }
+          },
+          "field_energy_log10_rmse_median": 0.7499393591603285,
+          "field_energy_log10_rmse_mean": 1.2742011374317017,
+          "state_relative_l2_median": 0.07714642628060311,
+          "state_relative_l2_mean": 0.08352438846761803,
+          "state_perturbation_relative_l2_median": 1.0340886820332207,
+          "state_perturbation_relative_l2_mean": 2.120171569012305,
+          "electric_mode_one_amplitude_relative_l2_median": 0.47181355450153317,
+          "electric_mode_one_phase_mae_radians_median": 0.9773486973158552,
+          "total_energy_max_relative_drift_median": 0.04612281794710449,
+          "wall_speedup_vs_closure": 56.506572924192405,
+          "model_call_reduction_vs_closure": 200.7478042659975,
+          "field_energy_improvement_vs_closure": 0.07907914329175805
+        },
+        {
+          "seed": 1,
+          "best_epoch": 24,
+          "short_validation_relative_l2": 0.01407355328659452,
+          "parameter_count": 416068,
+          "training_wall_seconds": 1909.5148949050345,
+          "rollout_wall_seconds": 10.53375443071127,
+          "model_calls": 797,
+          "complete_case_count": 19,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.7790048680482613,
+              "state_relative_l2_median": 0.10517776438489615,
+              "state_perturbation_relative_l2_median": 1.341774417351205
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.9867337327749074,
+              "state_relative_l2_median": 0.11581794182380425,
+              "state_perturbation_relative_l2_median": 1.533645558909513
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 3.8309571105850027,
+              "state_relative_l2_median": 0.1433376706294176,
+              "state_perturbation_relative_l2_median": 12.579767259457842
+            }
+          },
+          "field_energy_log10_rmse_median": 0.9251294884272034,
+          "field_energy_log10_rmse_mean": 1.4412277305389043,
+          "state_relative_l2_median": 0.11030764627567154,
+          "state_relative_l2_mean": 0.1266226098109675,
+          "state_perturbation_relative_l2_median": 1.5825637687902798,
+          "state_perturbation_relative_l2_mean": 3.0490852934395596,
+          "electric_mode_one_amplitude_relative_l2_median": 0.5088070119255708,
+          "electric_mode_one_phase_mae_radians_median": 0.9701881495745024,
+          "total_energy_max_relative_drift_median": 0.10007824289111261,
+          "wall_speedup_vs_closure": 62.740644476759485,
+          "model_call_reduction_vs_closure": 200.7478042659975,
+          "field_energy_improvement_vs_closure": -0.13605324302800872
+        },
+        {
+          "seed": 2,
+          "best_epoch": 23,
+          "short_validation_relative_l2": 0.015223539392138954,
+          "parameter_count": 416068,
+          "training_wall_seconds": 2247.419192499947,
+          "rollout_wall_seconds": 11.552493727765977,
+          "model_calls": 797,
+          "complete_case_count": 20,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.766629900793751,
+              "state_relative_l2_median": 0.13210470758401927,
+              "state_perturbation_relative_l2_median": 1.287926654285023
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.8287041621413267,
+              "state_relative_l2_median": 0.09904346955647243,
+              "state_perturbation_relative_l2_median": 0.9821518846894748
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 4.039074950229029,
+              "state_relative_l2_median": 0.10238165063638714,
+              "state_perturbation_relative_l2_median": 9.166539469851351
+            }
+          },
+          "field_energy_log10_rmse_median": 0.8977535085830768,
+          "field_energy_log10_rmse_mean": 1.3920241611867292,
+          "state_relative_l2_median": 0.10410015575002161,
+          "state_relative_l2_mean": 0.1219887126765192,
+          "state_perturbation_relative_l2_median": 1.4769364899729687,
+          "state_perturbation_relative_l2_mean": 2.8237388595357134,
+          "electric_mode_one_amplitude_relative_l2_median": 0.59614332529847,
+          "electric_mode_one_phase_mae_radians_median": 1.0450487090449438,
+          "total_energy_max_relative_drift_median": 0.15659450646085385,
+          "wall_speedup_vs_closure": 57.20795503695544,
+          "model_call_reduction_vs_closure": 200.7478042659975,
+          "field_energy_improvement_vs_closure": -0.10243571048576643
+        }
+      ],
+      "aggregate": {
+        "short_validation_relative_l2": {
+          "values": [
+            0.014625906587357579,
+            0.01407355328659452,
+            0.015223539392138954
+          ],
+          "median": 0.014625906587357579,
+          "mean": 0.014640999755363685,
+          "minimum": 0.01407355328659452,
+          "maximum": 0.015223539392138954
+        },
+        "field_energy_log10_rmse_median": {
+          "values": [
+            0.7499393591603285,
+            0.9251294884272034,
+            0.8977535085830768
+          ],
+          "median": 0.8977535085830768,
+          "mean": 0.8576074520568696,
+          "minimum": 0.7499393591603285,
+          "maximum": 0.9251294884272034
+        },
+        "field_energy_log10_rmse_mean": {
+          "values": [
+            1.2742011374317017,
+            1.4412277305389043,
+            1.3920241611867292
+          ],
+          "median": 1.3920241611867292,
+          "mean": 1.3691510097191115,
+          "minimum": 1.2742011374317017,
+          "maximum": 1.4412277305389043
+        },
+        "state_relative_l2_median": {
+          "values": [
+            0.07714642628060311,
+            0.11030764627567154,
+            0.10410015575002161
+          ],
+          "median": 0.10410015575002161,
+          "mean": 0.09718474276876543,
+          "minimum": 0.07714642628060311,
+          "maximum": 0.11030764627567154
+        },
+        "state_relative_l2_mean": {
+          "values": [
+            0.08352438846761803,
+            0.1266226098109675,
+            0.1219887126765192
+          ],
+          "median": 0.1219887126765192,
+          "mean": 0.11071190365170158,
+          "minimum": 0.08352438846761803,
+          "maximum": 0.1266226098109675
+        },
+        "state_perturbation_relative_l2_median": {
+          "values": [
+            1.0340886820332207,
+            1.5825637687902798,
+            1.4769364899729687
+          ],
+          "median": 1.4769364899729687,
+          "mean": 1.3645296469321562,
+          "minimum": 1.0340886820332207,
+          "maximum": 1.5825637687902798
+        },
+        "state_perturbation_relative_l2_mean": {
+          "values": [
+            2.120171569012305,
+            3.0490852934395596,
+            2.8237388595357134
+          ],
+          "median": 2.8237388595357134,
+          "mean": 2.6643319073291925,
+          "minimum": 2.120171569012305,
+          "maximum": 3.0490852934395596
+        },
+        "electric_mode_one_amplitude_relative_l2_median": {
+          "values": [
+            0.47181355450153317,
+            0.5088070119255708,
+            0.59614332529847
+          ],
+          "median": 0.5088070119255708,
+          "mean": 0.5255879639085247,
+          "minimum": 0.47181355450153317,
+          "maximum": 0.59614332529847
+        },
+        "electric_mode_one_phase_mae_radians_median": {
+          "values": [
+            0.9773486973158552,
+            0.9701881495745024,
+            1.0450487090449438
+          ],
+          "median": 0.9773486973158552,
+          "mean": 0.9975285186451005,
+          "minimum": 0.9701881495745024,
+          "maximum": 1.0450487090449438
+        },
+        "total_energy_max_relative_drift_median": {
+          "values": [
+            0.04612281794710449,
+            0.10007824289111261,
+            0.15659450646085385
+          ],
+          "median": 0.10007824289111261,
+          "mean": 0.10093185576635699,
+          "minimum": 0.04612281794710449,
+          "maximum": 0.15659450646085385
+        },
+        "all_complete": false,
+        "all_violation_free": true
+      }
+    },
+    "unet_history4": {
+      "completed_seed_count": 3,
+      "seeds": [
+        {
+          "seed": 0,
+          "best_epoch": 24,
+          "short_validation_relative_l2": 0.018214756079649376,
+          "parameter_count": 763204,
+          "training_wall_seconds": 3301.816079109907,
+          "rollout_wall_seconds": 10.675082985777408,
+          "model_calls": 797,
+          "complete_case_count": 20,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.6043261897460088,
+              "state_relative_l2_median": 0.040340326758075765,
+              "state_perturbation_relative_l2_median": 0.44032626930543944
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.7770621678886034,
+              "state_relative_l2_median": 0.044882984335880616,
+              "state_perturbation_relative_l2_median": 0.5941268146907424
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 2.4533206000661822,
+              "state_relative_l2_median": 0.0197516872076714,
+              "state_perturbation_relative_l2_median": 1.7108813207405218
+            }
+          },
+          "field_energy_log10_rmse_median": 0.7554166678213179,
+          "field_energy_log10_rmse_mean": 0.9754275866619248,
+          "state_relative_l2_median": 0.03637540997951194,
+          "state_relative_l2_mean": 0.047369129064084234,
+          "state_perturbation_relative_l2_median": 0.5406460881708429,
+          "state_perturbation_relative_l2_mean": 0.7251718856945697,
+          "electric_mode_one_amplitude_relative_l2_median": 0.37225973310381577,
+          "electric_mode_one_phase_mae_radians_median": 0.5679617176452205,
+          "total_energy_max_relative_drift_median": 0.01158689111031833,
+          "wall_speedup_vs_closure": 61.9100144348542,
+          "model_call_reduction_vs_closure": 200.7478042659975,
+          "field_energy_improvement_vs_closure": 0.07235304241050608
+        },
+        {
+          "seed": 1,
+          "best_epoch": 24,
+          "short_validation_relative_l2": 0.0176561067665435,
+          "parameter_count": 763204,
+          "training_wall_seconds": 3594.2026873920113,
+          "rollout_wall_seconds": 16.746616664808244,
+          "model_calls": 797,
+          "complete_case_count": 20,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.6318399631688838,
+              "state_relative_l2_median": 0.0491639442916417,
+              "state_perturbation_relative_l2_median": 0.5709076712891021
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.7000865827345892,
+              "state_relative_l2_median": 0.05660632432199194,
+              "state_perturbation_relative_l2_median": 0.5967802389567813
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 3.652518875500883,
+              "state_relative_l2_median": 0.051388758762400476,
+              "state_perturbation_relative_l2_median": 4.436704197825422
+            }
+          },
+          "field_energy_log10_rmse_median": 0.723351757743723,
+          "field_energy_log10_rmse_mean": 1.1839539490112376,
+          "state_relative_l2_median": 0.05027635152702109,
+          "state_relative_l2_mean": 0.053568860773508066,
+          "state_perturbation_relative_l2_median": 0.6716011151946071,
+          "state_perturbation_relative_l2_mean": 1.2602502445985393,
+          "electric_mode_one_amplitude_relative_l2_median": 0.39752089598165097,
+          "electric_mode_one_phase_mae_radians_median": 0.6546882473440413,
+          "total_energy_max_relative_drift_median": 0.01221698091270947,
+          "wall_speedup_vs_closure": 39.46436196462095,
+          "model_call_reduction_vs_closure": 200.7478042659975,
+          "field_energy_improvement_vs_closure": 0.11172855204103668
+        },
+        {
+          "seed": 2,
+          "best_epoch": 24,
+          "short_validation_relative_l2": 0.015592609154233819,
+          "parameter_count": 763204,
+          "training_wall_seconds": 749.2241691020317,
+          "rollout_wall_seconds": 18.34578597312793,
+          "model_calls": 796,
+          "complete_case_count": 20,
+          "violation_free_case_count": 20,
+          "per_regime": {
+            "strong_nonlinear": {
+              "case_count": 11,
+              "field_energy_log10_rmse_median": 0.5494088261717847,
+              "state_relative_l2_median": 0.04751382796823006,
+              "state_perturbation_relative_l2_median": 0.5501380186803628
+            },
+            "transition": {
+              "case_count": 6,
+              "field_energy_log10_rmse_median": 0.6107333582320587,
+              "state_relative_l2_median": 0.03779984479396337,
+              "state_perturbation_relative_l2_median": 0.4881016636138713
+            },
+            "weak": {
+              "case_count": 3,
+              "field_energy_log10_rmse_median": 2.2148828044345286,
+              "state_relative_l2_median": 0.008909700134062752,
+              "state_perturbation_relative_l2_median": 0.7891157069778533
+            }
+          },
+          "field_energy_log10_rmse_median": 0.6193158954690607,
+          "field_energy_log10_rmse_mean": 0.8085123612254211,
+          "state_relative_l2_median": 0.04220600723221444,
+          "state_relative_l2_mean": 0.04024437038229071,
+          "state_perturbation_relative_l2_median": 0.5278615593543736,
+          "state_perturbation_relative_l2_mean": 0.5371431061540705,
+          "electric_mode_one_amplitude_relative_l2_median": 0.24799159912527585,
+          "electric_mode_one_phase_mae_radians_median": 0.5919379275482788,
+          "total_energy_max_relative_drift_median": 0.008987900993730983,
+          "wall_speedup_vs_closure": 36.02432420779322,
+          "model_call_reduction_vs_closure": 201.0,
+          "field_energy_improvement_vs_closure": 0.23948394218569471
+        }
+      ],
+      "aggregate": {
+        "short_validation_relative_l2": {
+          "values": [
+            0.018214756079649376,
+            0.0176561067665435,
+            0.015592609154233819
+          ],
+          "median": 0.0176561067665435,
+          "mean": 0.017154490666808898,
+          "minimum": 0.015592609154233819,
+          "maximum": 0.018214756079649376
+        },
+        "field_energy_log10_rmse_median": {
+          "values": [
+            0.7554166678213179,
+            0.723351757743723,
+            0.6193158954690607
+          ],
+          "median": 0.723351757743723,
+          "mean": 0.6993614403447005,
+          "minimum": 0.6193158954690607,
+          "maximum": 0.7554166678213179
+        },
+        "field_energy_log10_rmse_mean": {
+          "values": [
+            0.9754275866619248,
+            1.1839539490112376,
+            0.8085123612254211
+          ],
+          "median": 0.9754275866619248,
+          "mean": 0.9892979656328612,
+          "minimum": 0.8085123612254211,
+          "maximum": 1.1839539490112376
+        },
+        "state_relative_l2_median": {
+          "values": [
+            0.03637540997951194,
+            0.05027635152702109,
+            0.04220600723221444
+          ],
+          "median": 0.04220600723221444,
+          "mean": 0.042952589579582486,
+          "minimum": 0.03637540997951194,
+          "maximum": 0.05027635152702109
+        },
+        "state_relative_l2_mean": {
+          "values": [
+            0.047369129064084234,
+            0.053568860773508066,
+            0.04024437038229071
+          ],
+          "median": 0.047369129064084234,
+          "mean": 0.047060786739961,
+          "minimum": 0.04024437038229071,
+          "maximum": 0.053568860773508066
+        },
+        "state_perturbation_relative_l2_median": {
+          "values": [
+            0.5406460881708429,
+            0.6716011151946071,
+            0.5278615593543736
+          ],
+          "median": 0.5406460881708429,
+          "mean": 0.5800362542399412,
+          "minimum": 0.5278615593543736,
+          "maximum": 0.6716011151946071
+        },
+        "state_perturbation_relative_l2_mean": {
+          "values": [
+            0.7251718856945697,
+            1.2602502445985393,
+            0.5371431061540705
+          ],
+          "median": 0.7251718856945697,
+          "mean": 0.8408550788157264,
+          "minimum": 0.5371431061540705,
+          "maximum": 1.2602502445985393
+        },
+        "electric_mode_one_amplitude_relative_l2_median": {
+          "values": [
+            0.37225973310381577,
+            0.39752089598165097,
+            0.24799159912527585
+          ],
+          "median": 0.37225973310381577,
+          "mean": 0.3392574094035809,
+          "minimum": 0.24799159912527585,
+          "maximum": 0.39752089598165097
+        },
+        "electric_mode_one_phase_mae_radians_median": {
+          "values": [
+            0.5679617176452205,
+            0.6546882473440413,
+            0.5919379275482788
+          ],
+          "median": 0.5919379275482788,
+          "mean": 0.6048626308458469,
+          "minimum": 0.5679617176452205,
+          "maximum": 0.6546882473440413
+        },
+        "total_energy_max_relative_drift_median": {
+          "values": [
+            0.01158689111031833,
+            0.01221698091270947,
+            0.008987900993730983
+          ],
+          "median": 0.01158689111031833,
+          "mean": 0.010930591005586262,
+          "minimum": 0.008987900993730983,
+          "maximum": 0.01221698091270947
+        },
+        "all_complete": true,
+        "all_violation_free": true
+      }
+    }
+  },
+  "history_fno_vs_single_fno": {
+    "common_seeds": [
+      0,
+      1,
+      2
+    ],
+    "metrics": {
+      "short_validation_relative_l2": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 0.01750116684131337,
+            "candidate": 0.014625906587357579,
+            "relative_improvement": 0.16428963165864088
+          },
+          {
+            "seed": 1,
+            "baseline": 0.017488044935316183,
+            "candidate": 0.01407355328659452,
+            "relative_improvement": 0.19524719094392753
+          },
+          {
+            "seed": 2,
+            "baseline": 0.017263067829462256,
+            "candidate": 0.015223539392138954,
+            "relative_improvement": 0.11814403195720008
+          }
+        ],
+        "candidate_better_count": 3
+      },
+      "field_energy_log10_rmse_median": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 0.7173309323367036,
+            "candidate": 0.7499393591603285,
+            "relative_improvement": -0.045457996238086364
+          },
+          {
+            "seed": 1,
+            "baseline": 0.7789243110597193,
+            "candidate": 0.9251294884272034,
+            "relative_improvement": -0.18770139189592555
+          },
+          {
+            "seed": 2,
+            "baseline": 0.892070214161578,
+            "candidate": 0.8977535085830768,
+            "relative_improvement": -0.006370904813631008
+          }
+        ],
+        "candidate_better_count": 0
+      },
+      "field_energy_log10_rmse_mean": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 0.91524805392111,
+            "candidate": 1.2742011374317017,
+            "relative_improvement": -0.39219212974314804
+          },
+          {
+            "seed": 1,
+            "baseline": 1.0545512915602537,
+            "candidate": 1.4412277305389043,
+            "relative_improvement": -0.3666739039374237
+          },
+          {
+            "seed": 2,
+            "baseline": 0.9558815022747064,
+            "candidate": 1.3920241611867292,
+            "relative_improvement": -0.4562727261424522
+          }
+        ],
+        "candidate_better_count": 0
+      },
+      "state_relative_l2_median": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 0.10486748354256398,
+            "candidate": 0.07714642628060311,
+            "relative_improvement": 0.26434368715169315
+          },
+          {
+            "seed": 1,
+            "baseline": 0.04538619980487374,
+            "candidate": 0.11030764627567154,
+            "relative_improvement": -1.4304226119373469
+          },
+          {
+            "seed": 2,
+            "baseline": 0.04431789883010573,
+            "candidate": 0.10410015575002161,
+            "relative_improvement": -1.3489415901483357
+          }
+        ],
+        "candidate_better_count": 1
+      },
+      "state_relative_l2_mean": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 0.11825903726526892,
+            "candidate": 0.08352438846761803,
+            "relative_improvement": 0.29371665456515583
+          },
+          {
+            "seed": 1,
+            "baseline": 0.30041486777163934,
+            "candidate": 0.1266226098109675,
+            "relative_improvement": 0.578507512793209
+          },
+          {
+            "seed": 2,
+            "baseline": 0.05704397532596846,
+            "candidate": 0.1219887126765192,
+            "relative_improvement": -1.1385030054345735
+          }
+        ],
+        "candidate_better_count": 2
+      },
+      "state_perturbation_relative_l2_median": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 1.1325107827900451,
+            "candidate": 1.0340886820332207,
+            "relative_improvement": 0.08690610478281936
+          },
+          {
+            "seed": 1,
+            "baseline": 0.9969497117756468,
+            "candidate": 1.5825637687902798,
+            "relative_improvement": -0.5874058140521529
+          },
+          {
+            "seed": 2,
+            "baseline": 0.7237481180066851,
+            "candidate": 1.4769364899729687,
+            "relative_improvement": -1.040677486030197
+          }
+        ],
+        "candidate_better_count": 1
+      },
+      "state_perturbation_relative_l2_mean": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 1.4003282515031896,
+            "candidate": 2.120171569012305,
+            "relative_improvement": -0.5140532705359587
+          },
+          {
+            "seed": 1,
+            "baseline": 2.307468993079682,
+            "candidate": 3.0490852934395596,
+            "relative_improvement": -0.32139816508219826
+          },
+          {
+            "seed": 2,
+            "baseline": 0.8209504815913821,
+            "candidate": 2.8237388595357134,
+            "relative_improvement": -2.439597055917429
+          }
+        ],
+        "candidate_better_count": 0
+      },
+      "electric_mode_one_amplitude_relative_l2_median": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 0.40814817738399356,
+            "candidate": 0.47181355450153317,
+            "relative_improvement": -0.15598594002207689
+          },
+          {
+            "seed": 1,
+            "baseline": 0.43303764791210975,
+            "candidate": 0.5088070119255708,
+            "relative_improvement": -0.17497177065038771
+          },
+          {
+            "seed": 2,
+            "baseline": 0.3545109462912408,
+            "candidate": 0.59614332529847,
+            "relative_improvement": -0.6815935630058694
+          }
+        ],
+        "candidate_better_count": 0
+      },
+      "electric_mode_one_phase_mae_radians_median": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 0.8782083671847548,
+            "candidate": 0.9773486973158552,
+            "relative_improvement": -0.1128893026251975
+          },
+          {
+            "seed": 1,
+            "baseline": 0.8289922656836783,
+            "candidate": 0.9701881495745024,
+            "relative_improvement": -0.17032231751206794
+          },
+          {
+            "seed": 2,
+            "baseline": 0.8925603144946659,
+            "candidate": 1.0450487090449438,
+            "relative_improvement": -0.17084379853546497
+          }
+        ],
+        "candidate_better_count": 0
+      },
+      "total_energy_max_relative_drift_median": {
+        "pairs": [
+          {
+            "seed": 0,
+            "baseline": 0.20108339753893437,
+            "candidate": 0.04612281794710449,
+            "relative_improvement": 0.7706284133269926
+          },
+          {
+            "seed": 1,
+            "baseline": 0.016186261888789327,
+            "candidate": 0.10007824289111261,
+            "relative_improvement": -5.1829126192766735
+          },
+          {
+            "seed": 2,
+            "baseline": 0.04256577506447451,
+            "candidate": 0.15659450646085385,
+            "relative_improvement": -2.6788830045655145
+          }
+        ],
+        "candidate_better_count": 1
+      }
+    }
+  },
+  "closure_validation_benchmark": {
+    "stage": "continuum_v1_frozen_closure_validation_benchmark",
+    "split": "validation",
+    "checkpoint": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_baseline/seed1/best.pt",
+    "case_count": 20,
+    "dt": 0.002,
+    "output_dt": 0.02,
+    "maximum_mode": 8,
+    "integration_steps": 40000,
+    "model_calls": 159996,
+    "wall_seconds": 660.8945417427458,
+    "complete_case_count": 14,
+    "violation_free_case_count": 10,
+    "field_energy_log10_rmse_median": 0.8143363826517371,
+    "field_energy_log10_rmse_mean": 1.2161157390947497,
+    "cases": [
+      {
+        "case_id": "K0p280_a0p085",
+        "K": 0.28,
+        "alpha": 0.085,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.2744691677089819
+      },
+      {
+        "case_id": "K0p280_a0p137",
+        "K": 0.28,
+        "alpha": 0.137,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 3162,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.5171756781997473
+      },
+      {
+        "case_id": "K0p295_a0p178",
+        "K": 0.295,
+        "alpha": 0.178,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 10453,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.6381460932621695
+      },
+      {
+        "case_id": "K0p299_a0p105",
+        "K": 0.299,
+        "alpha": 0.105,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 1156,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.4778711276872608
+      },
+      {
+        "case_id": "K0p303_a0p035",
+        "K": 0.303,
+        "alpha": 0.035,
+        "regime": "transition",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.3471027397287731
+      },
+      {
+        "case_id": "K0p321_a0p185",
+        "K": 0.321,
+        "alpha": 0.185,
+        "regime": "transition",
+        "closure": "fno",
+        "completed_time": 78.56,
+        "clamp_count": 13928,
+        "finite_to_final_time": false,
+        "field_energy_log10_rmse": 0.8163176511180128
+      },
+      {
+        "case_id": "K0p342_a0p167",
+        "K": 0.342,
+        "alpha": 0.167,
+        "regime": "transition",
+        "closure": "fno",
+        "completed_time": 77.14,
+        "clamp_count": 10500,
+        "finite_to_final_time": false,
+        "field_energy_log10_rmse": 0.8752282475069453
+      },
+      {
+        "case_id": "K0p361_a0p035",
+        "K": 0.361,
+        "alpha": 0.035,
+        "regime": "transition",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.5736191517860003
+      },
+      {
+        "case_id": "K0p368_a0p186",
+        "K": 0.368,
+        "alpha": 0.186,
+        "regime": "transition",
+        "closure": "fno",
+        "completed_time": 76.02,
+        "clamp_count": 14055,
+        "finite_to_final_time": false,
+        "field_energy_log10_rmse": 1.022143085429242
+      },
+      {
+        "case_id": "K0p372_a0p085",
+        "K": 0.372,
+        "alpha": 0.085,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.6296413070105564
+      },
+      {
+        "case_id": "K0p407_a0p105",
+        "K": 0.407,
+        "alpha": 0.105,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.8123551141854616
+      },
+      {
+        "case_id": "K0p409_a0p182",
+        "K": 0.409,
+        "alpha": 0.182,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 73.72,
+        "clamp_count": 5435,
+        "finite_to_final_time": false,
+        "field_energy_log10_rmse": 1.001762121611715
+      },
+      {
+        "case_id": "K0p412_a0p043",
+        "K": 0.412,
+        "alpha": 0.043,
+        "regime": "transition",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 1.2455109862173772
+      },
+      {
+        "case_id": "K0p420_a0p122",
+        "K": 0.42,
+        "alpha": 0.122,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.8179579206455823
+      },
+      {
+        "case_id": "K0p445_a0p030",
+        "K": 0.445,
+        "alpha": 0.03,
+        "regime": "weak",
+        "closure": "fno",
+        "completed_time": 75.54,
+        "clamp_count": 9821,
+        "finite_to_final_time": false,
+        "field_energy_log10_rmse": 3.666536213261628
+      },
+      {
+        "case_id": "K0p454_a0p125",
+        "K": 0.454,
+        "alpha": 0.125,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.7248413677837681
+      },
+      {
+        "case_id": "K0p460_a0p177",
+        "K": 0.46,
+        "alpha": 0.177,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 0.7748670741429933
+      },
+      {
+        "case_id": "K0p472_a0p032",
+        "K": 0.472,
+        "alpha": 0.032,
+        "regime": "weak",
+        "closure": "fno",
+        "completed_time": 73.38,
+        "clamp_count": 10314,
+        "finite_to_final_time": false,
+        "field_energy_log10_rmse": 4.46202720653132
+      },
+      {
+        "case_id": "K0p474_a0p051",
+        "K": 0.474,
+        "alpha": 0.051,
+        "regime": "weak",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 4819,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 3.5556101935549704
+      },
+      {
+        "case_id": "K0p500_a0p165",
+        "K": 0.5,
+        "alpha": 0.165,
+        "regime": "strong_nonlinear",
+        "closure": "fno",
+        "completed_time": 80.0,
+        "clamp_count": 0,
+        "finite_to_final_time": true,
+        "field_energy_log10_rmse": 1.0891323345224937
+      }
+    ]
+  }
+}

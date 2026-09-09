@@ -1,0 +1,17 @@
+{
+  "report_sha256": "3ccbdebf8d57a6cd1408f8e782d3a6fcf2136ca9935083325faf719ce7407dc1",
+  "representative_selection": "Within each regime sort by (K, alpha), choose index len(group)//2; independent of model error.",
+  "representative_case_ids": [
+    "K0p472_a0p032",
+    "K0p361_a0p035",
+    "K0p407_a0p105"
+  ],
+  "late_interval": [
+    30,
+    80
+  ],
+  "paired_medians_verified_against_report": true,
+  "test_used": false,
+  "script": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/scripts/plot_round11_formal_review.py",
+  "run_count": 9
+}

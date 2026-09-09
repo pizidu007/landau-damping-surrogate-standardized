@@ -6,6 +6,8 @@
 
 ## 新成员从这里开始
 
+**先看成果：[关键结果与可视化](docs/results/KEY_RESULTS_zh-CN.md) · [checkpoint 下载与使用](docs/results/CHECKPOINTS_zh-CN.md)。** 已公开 2026-09-09 结果快照和 16 个可校验权重，最新 Round 11 全部九组结果及失败边界一并保留。
+
 第一次接触项目，请从[新成员学习路线](docs/onboarding/README.md)开始，不需要先读完历史报告或运行大规模训练：
 
 1. [背景与核心概念](docs/onboarding/01_BACKGROUND_zh-CN.md)：从分布函数、Landau 阻尼、矩与热流，讲到为什么需要神经闭合。
@@ -13,7 +15,7 @@
 3. [任务定义与验收标准](docs/onboarding/03_TASK_DEFINITIONS_zh-CN.md)：输入输出、数组形状、A/B/C 对照、数据使用边界、指标与交付物。
 4. [术语与符号速查](docs/onboarding/04_GLOSSARY_zh-CN.md)：遇到不熟悉的缩写或符号时查阅。
 
-准备动手时，再读[协作与共享服务器入门](docs/operations/COLLABORATION_zh-CN.md)。Git 仓库包含源码、配置、测试、文档和来源记录；正式数据、模型权重、实验输出和生成的演示文件保留在共享服务器。下文资产清单和结果链接描述的是完整服务器工作目录，刚克隆的仓库需要先连接对应资产。
+准备动手时，再读[协作与共享服务器入门](docs/operations/COLLABORATION_zh-CN.md)。Git 仓库包含源码、配置、测试、文档、来源记录和精选图表/指标；选定模型通过 [GitHub Release](https://github.com/pizidu007/landau-damping-surrogate-standardized/releases/tag/research-assets-2026-09-09) 下载。完整数据、实验数组、日志和中间权重保留在共享服务器。下文历史资产链接描述的是完整服务器目录，新 clone 只需按用途连接或下载对应资产。
 
 当前研究已扩展至 Gkeyll 连续体参考数据和具有历史输入的流体热流闭合；最新实验口径见 [Round 11 协议](docs/experiments/LANDAU_CLOSURE_ROUND11_PROTOCOL_zh-CN.md)。下文的 Snapshot/Rollout 指标属于较早分支，不代表 Round 11 的结果。
 
@@ -77,6 +79,7 @@ landau-damping-surrogate-standardized/
 │   ├── rollout/                最终正性 Rollout 模型
 │   └── closure/                PIC 热流闭合模型及部署参数
 ├── results/
+│   ├── published/              公开的精选图表与指标快照
 │   ├── smoke/                  已验证的小型推理结果
 │   └── runs/                   新实验输出（运行时创建）
 ├── logs/                       新运行日志（运行时创建）
@@ -110,6 +113,10 @@ export LANDAU_DATA_ROOT=/wangx/home/duxinxu/datasets/landau-damping-surrogate-st
 源码树不再保存大型数据实体；旧的 `data/processed/...` 路径仅保留兼容符号链接。
 
 ## 5. 首次检查
+
+下面的 `--require-all` 适用于已备齐历史资产的共享服务器工作目录。
+新 clone 请按 [checkpoint 指南](docs/results/CHECKPOINTS_zh-CN.md)下载所需权重，
+再运行对应示例；不需要补齐全部历史资产才能上手。
 
 ```bash
 python scripts/verify_assets.py --require-all
@@ -222,4 +229,4 @@ test 上将 `dq/dx` 相对误差从校准 HP 的 `0.985` 降到 `0.309`；长期
 - [模型卡](models/closure/MODEL_CARD.md)
 - [冻结部署参数](models/closure/deployment.json)
 - [机器可读指标](results/closure_fno_v1/final_report/study_summary.json)
-- [四组可视化](results/closure_fno_v1/final_visualizations/)
+- [公开的八张结果图](results/published/2026-09-09/pic_closure_v1/figures/)

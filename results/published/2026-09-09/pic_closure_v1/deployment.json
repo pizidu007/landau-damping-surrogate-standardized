@@ -1,0 +1,19 @@
+{
+  "model_id": "pic_heat_flux_closure_fno_v1",
+  "checkpoint": "closure_fno_pic_v1.pt",
+  "checkpoint_sha256": "6d2628f0b98ffaf5d528a767ba0706cca29761611c2190eeca2ac8d285c71cdc",
+  "closure": {
+    "fno_weight": 0.25,
+    "hammett_perkins_weight": 0.75,
+    "hammett_perkins_scale": 0.32053544158650193,
+    "maximum_fluid_mode": 24
+  },
+  "integrator": {
+    "method": "rk4",
+    "substep_dt": 0.02,
+    "final_time": 60.0
+  },
+  "selection_policy": "All architecture and deployment choices were frozen on the validation split before opening the five test parameter pairs.",
+  "metrics": "../../results/closure_fno_v1/final_report/study_summary.json",
+  "model_card": "MODEL_CARD.md"
+}

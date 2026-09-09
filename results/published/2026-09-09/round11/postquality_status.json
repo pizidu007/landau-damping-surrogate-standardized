@@ -1,0 +1,9 @@
+{
+  "pid": 994,
+  "state": "complete_negative_accuracy_result",
+  "test_opened": false,
+  "gpu": 5,
+  "updated": "2026-09-07T15:14:03.020274+00:00",
+  "reason": "No A/B/C arm passed the frozen quality gate across all three training seeds.",
+  "next_research": "Diagnose finite training horizon and closure structure before inferring that more evolved moments are necessary."
+}

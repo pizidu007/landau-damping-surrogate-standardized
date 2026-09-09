@@ -1,0 +1,1286 @@
+{
+  "stage": "continuum_v1_macrostep_free_rollout",
+  "checkpoint": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/fno_history4/seed2/best.pt",
+  "split": "test",
+  "case_count": 36,
+  "history_steps": 4,
+  "macro_stride": 5,
+  "truth_seed_frames": 4,
+  "truth_feedback_after_seed": false,
+  "output_count": 800,
+  "model_calls": 796,
+  "wall_seconds": 14.21970720263198,
+  "aggregate": {
+    "case_count": 36,
+    "complete_case_count": 36,
+    "violation_free_case_count": 36,
+    "field_energy_log10_rmse_median": 0.9755871787773005,
+    "field_energy_log10_rmse_mean": 1.4573715198702573,
+    "state_relative_l2_median": 0.1150085986937257,
+    "state_relative_l2_mean": 0.12415446993608183,
+    "state_perturbation_relative_l2_median": 1.6698847451707122,
+    "state_perturbation_relative_l2_mean": 2.8508835164310637
+  },
+  "cases": [
+    {
+      "case_id": "K0p280_a0p035",
+      "K": 0.28,
+      "alpha": 0.035,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90143248459441,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.03821965178355741,
+      "state_perturbation_relative_l2": 0.6857342621777773,
+      "channel_relative_l2": {
+        "M0": 0.008095275255961957,
+        "M1": 0.6650875445370776,
+        "M2": 0.031458582399568405,
+        "E": 0.6749434250223549
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.6754912398512068,
+        "M1": 0.6650875445370776,
+        "M2": 0.7206101452411126,
+        "E": 0.6749434250223549
+      },
+      "field_energy_log10_rmse": 0.7500820974603392,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.5753159737181894,
+        "phase_mae_radians": 0.429442356864215
+      },
+      "mass_max_relative_drift": 2.2007152479155273e-06,
+      "momentum_max_absolute_drift": 8.061306289859617e-08,
+      "total_energy_max_relative_drift": 0.0032689175860773877,
+      "minimum_density": 0.9594848155975342,
+      "minimum_pressure": 0.8394935232690056,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p292_a0p060",
+      "K": 0.292,
+      "alpha": 0.06,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90042720842044,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.0448146622093108,
+      "state_perturbation_relative_l2": 0.5028105029297383,
+      "channel_relative_l2": {
+        "M0": 0.009853902729766047,
+        "M1": 0.498002935533569,
+        "M2": 0.03697962997328177,
+        "E": 0.49881364383058907
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.4994554727456537,
+        "M1": 0.498002935533569,
+        "M2": 0.5115227185373808,
+        "E": 0.49881364383058907
+      },
+      "field_energy_log10_rmse": 0.6759286045035815,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.3524765212271882,
+        "phase_mae_radians": 0.4841268011115123
+      },
+      "mass_max_relative_drift": 1.6815029053362032e-06,
+      "momentum_max_absolute_drift": 8.042343324655945e-08,
+      "total_energy_max_relative_drift": 0.009200205466084401,
+      "minimum_density": 0.9400180578231812,
+      "minimum_pressure": 0.8083483748815452,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p303_a0p085",
+      "K": 0.303,
+      "alpha": 0.085,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.9008876413816,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.04888996402558025,
+      "state_perturbation_relative_l2": 0.4267292845709658,
+      "channel_relative_l2": {
+        "M0": 0.009587408601358037,
+        "M1": 0.3737896351311292,
+        "M2": 0.04942683393530121,
+        "E": 0.3593176888653094
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.36930540850126364,
+        "M1": 0.3737896351311292,
+        "M2": 0.5153679704210328,
+        "E": 0.3593176888653094
+      },
+      "field_energy_log10_rmse": 0.46902456438975126,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.19719631425849968,
+        "phase_mae_radians": 0.3976950012641503
+      },
+      "mass_max_relative_drift": 1.6149133383672187e-06,
+      "momentum_max_absolute_drift": 2.3077518544285265e-08,
+      "total_energy_max_relative_drift": 0.08536172569244803,
+      "minimum_density": 0.9150255918502808,
+      "minimum_pressure": 0.746051469653622,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p326_a0p072",
+      "K": 0.326,
+      "alpha": 0.072,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90020757957298,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.058367370936255665,
+      "state_perturbation_relative_l2": 0.7089479780350153,
+      "channel_relative_l2": {
+        "M0": 0.012568795502027165,
+        "M1": 0.6762869584192541,
+        "M2": 0.05554247047415616,
+        "E": 0.6468957402191525
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.6552832355016085,
+        "M1": 0.6762869584192541,
+        "M2": 0.775724963200829,
+        "E": 0.6468957402191525
+      },
+      "field_energy_log10_rmse": 0.7401233606080325,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.4261596517398146,
+        "phase_mae_radians": 0.6624317739903165
+      },
+      "mass_max_relative_drift": 1.226086167197514e-06,
+      "momentum_max_absolute_drift": 5.2565155780592716e-08,
+      "total_energy_max_relative_drift": 0.05862314406513851,
+      "minimum_density": 0.9280216693878174,
+      "minimum_pressure": 0.7871250785255498,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p338_a0p085",
+      "K": 0.338,
+      "alpha": 0.085,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90106218968958,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.0842460875956831,
+      "state_perturbation_relative_l2": 0.9562572495815044,
+      "channel_relative_l2": {
+        "M0": 0.01652959299206243,
+        "M1": 0.8486204609941296,
+        "M2": 0.0885108137330729,
+        "E": 0.780968525934438
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.7918425058559977,
+        "M1": 0.8486204609941296,
+        "M2": 1.1247034748575637,
+        "E": 0.780968525934438
+      },
+      "field_energy_log10_rmse": 0.6501593741796007,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.40997521841600004,
+        "phase_mae_radians": 0.6498376865900526
+      },
+      "mass_max_relative_drift": 1.6926787730579124e-06,
+      "momentum_max_absolute_drift": 5.237961888316311e-08,
+      "total_energy_max_relative_drift": 0.17962461047517803,
+      "minimum_density": 0.9150255918502808,
+      "minimum_pressure": 0.7594466947891568,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p349_a0p060",
+      "K": 0.349,
+      "alpha": 0.06,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.9014215483791,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.07146178791618427,
+      "state_perturbation_relative_l2": 1.2759951277377575,
+      "channel_relative_l2": {
+        "M0": 0.0135339008588642,
+        "M1": 0.9947557207857546,
+        "M2": 0.08175887699618918,
+        "E": 0.9206913957044737
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 1.0075066187534956,
+        "M1": 0.9947557207857546,
+        "M2": 1.6173753134290876,
+        "E": 0.9206913957044737
+      },
+      "field_energy_log10_rmse": 0.9362162444121159,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.6005553466541137,
+        "phase_mae_radians": 1.0295734411174697
+      },
+      "mass_max_relative_drift": 2.8596259600303583e-06,
+      "momentum_max_absolute_drift": 4.922731022302603e-08,
+      "total_energy_max_relative_drift": 0.11374555686528985,
+      "minimum_density": 0.9400180578231812,
+      "minimum_pressure": 0.6821669566981055,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p384_a0p064",
+      "K": 0.384,
+      "alpha": 0.064,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90076331232488,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.08337560956824677,
+      "state_perturbation_relative_l2": 1.9698485150011924,
+      "channel_relative_l2": {
+        "M0": 0.016012555665263,
+        "M1": 1.5529152919157814,
+        "M2": 0.09751665498688614,
+        "E": 1.376041311413165
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 1.5125348485224137,
+        "M1": 1.5529152919157814,
+        "M2": 2.419215816792756,
+        "E": 1.376041311413165
+      },
+      "field_energy_log10_rmse": 0.9016833594333996,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.6067215572107341,
+        "phase_mae_radians": 1.3060514539450847
+      },
+      "mass_max_relative_drift": 3.1385570852231898e-06,
+      "momentum_max_absolute_drift": 6.085247150325966e-08,
+      "total_energy_max_relative_drift": 0.17623083313674767,
+      "minimum_density": 0.9360193014144897,
+      "minimum_pressure": 0.8267979907866108,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p431_a0p066",
+      "K": 0.431,
+      "alpha": 0.066,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90015133268838,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.1552216483249154,
+      "state_perturbation_relative_l2": 5.648114906581105,
+      "channel_relative_l2": {
+        "M0": 0.02427148635838476,
+        "M1": 3.853378763095878,
+        "M2": 0.19589703898841054,
+        "E": 3.092742445942254
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 3.337446426287809,
+        "M1": 3.853378763095878,
+        "M2": 7.118615324352947,
+        "E": 3.092742445942254
+      },
+      "field_energy_log10_rmse": 2.053178937916773,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 2.8342371528419714,
+        "phase_mae_radians": 1.4331966362505861
+      },
+      "mass_max_relative_drift": 3.1716190367144133e-06,
+      "momentum_max_absolute_drift": 4.28735802387456e-08,
+      "total_energy_max_relative_drift": 0.3231078746127175,
+      "minimum_density": 0.9238369464874268,
+      "minimum_pressure": 0.7544706866743326,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p431_a0p091",
+      "K": 0.431,
+      "alpha": 0.091,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90008525096486,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.16861101208556037,
+      "state_perturbation_relative_l2": 3.9455259599845527,
+      "channel_relative_l2": {
+        "M0": 0.024999102230022035,
+        "M1": 2.5232358363797216,
+        "M2": 0.2152437183224904,
+        "E": 2.110628531237592
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 2.2530624832110684,
+        "M1": 2.5232358363797216,
+        "M2": 4.943870447106461,
+        "E": 2.110628531237592
+      },
+      "field_energy_log10_rmse": 1.4205624683959495,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 1.417578206440372,
+        "phase_mae_radians": 1.4742717536414864
+      },
+      "mass_max_relative_drift": 2.530403437586877e-06,
+      "momentum_max_absolute_drift": 3.317109077471289e-08,
+      "total_energy_max_relative_drift": 0.3469640827678203,
+      "minimum_density": 0.9090273976325989,
+      "minimum_pressure": 0.7675193131695086,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p442_a0p075",
+      "K": 0.442,
+      "alpha": 0.075,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90050879753461,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.14249869075406582,
+      "state_perturbation_relative_l2": 4.783309360965049,
+      "channel_relative_l2": {
+        "M0": 0.02023863713509178,
+        "M1": 2.9064545823061483,
+        "M2": 0.18482709766608965,
+        "E": 2.2672850844739805
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 2.5478483289441307,
+        "M1": 2.9064545823061483,
+        "M2": 6.1069950288279715,
+        "E": 2.2672850844739805
+      },
+      "field_energy_log10_rmse": 2.0010112641741684,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 1.974759367789898,
+        "phase_mae_radians": 1.3494416967572982
+      },
+      "mass_max_relative_drift": 2.6440247967206634e-06,
+      "momentum_max_absolute_drift": 2.6200723389260137e-08,
+      "total_energy_max_relative_drift": 0.34614741215726874,
+      "minimum_density": 0.9250226020812988,
+      "minimum_pressure": 0.8076681448390037,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p454_a0p088",
+      "K": 0.454,
+      "alpha": 0.088,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90133805686459,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.12682369143437566,
+      "state_perturbation_relative_l2": 3.7718672792005496,
+      "channel_relative_l2": {
+        "M0": 0.019191569120427805,
+        "M1": 2.411048723110982,
+        "M2": 0.16379695875980346,
+        "E": 1.7800521731367425
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 2.1338660299481074,
+        "M1": 2.411048723110982,
+        "M2": 4.704539984766825,
+        "E": 1.7800521731367425
+      },
+      "field_energy_log10_rmse": 1.8415167292374313,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 1.4250100698806931,
+        "phase_mae_radians": 1.3940885058344412
+      },
+      "mass_max_relative_drift": 2.927612524209963e-06,
+      "momentum_max_absolute_drift": 2.4350811144573337e-08,
+      "total_energy_max_relative_drift": 0.3022821756439392,
+      "minimum_density": 0.9120265245437622,
+      "minimum_pressure": 0.7782703984172843,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p465_a0p105",
+      "K": 0.465,
+      "alpha": 0.105,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90089411297673,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.18984677848756887,
+      "state_perturbation_relative_l2": 4.814878657982108,
+      "channel_relative_l2": {
+        "M0": 0.02842467658269498,
+        "M1": 3.2533576379464075,
+        "M2": 0.24251228111247536,
+        "E": 2.6196103432504656
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 2.711931568929701,
+        "M1": 3.2533576379464075,
+        "M2": 5.809282625350845,
+        "E": 2.6196103432504656
+      },
+      "field_energy_log10_rmse": 2.2010820665734063,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 2.2960111082847168,
+        "phase_mae_radians": 1.6254251888539044
+      },
+      "mass_max_relative_drift": 2.9942020801773314e-06,
+      "momentum_max_absolute_drift": 1.749867806116071e-08,
+      "total_energy_max_relative_drift": 0.3570113808561538,
+      "minimum_density": 0.8950316309928894,
+      "minimum_pressure": 0.7674754022253923,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p488_a0p128",
+      "K": 0.488,
+      "alpha": 0.128,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90077100175665,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.15687493823688126,
+      "state_perturbation_relative_l2": 3.4783924411699947,
+      "channel_relative_l2": {
+        "M0": 0.025986754218377477,
+        "M1": 2.5707243188624758,
+        "M2": 0.19865450317796332,
+        "E": 1.9725220834918973
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 2.176555393473678,
+        "M1": 2.5707243188624758,
+        "M2": 4.027754873094644,
+        "E": 1.9725220834918973
+      },
+      "field_energy_log10_rmse": 2.178501792393823,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 1.7929077361412304,
+        "phase_mae_radians": 1.055483022796147
+      },
+      "mass_max_relative_drift": 7.809139839060585e-07,
+      "momentum_max_absolute_drift": 1.869921106018695e-08,
+      "total_energy_max_relative_drift": 0.3511194955862753,
+      "minimum_density": 0.8720385432243347,
+      "minimum_pressure": 0.7332530138242676,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p500_a0p115",
+      "K": 0.5,
+      "alpha": 0.115,
+      "regime": "transition",
+      "completed_time": 79.90050704333649,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.15863318936183016,
+      "state_perturbation_relative_l2": 4.226212216931761,
+      "channel_relative_l2": {
+        "M0": 0.027099787563171617,
+        "M1": 3.0098708834672276,
+        "M2": 0.20239374381867636,
+        "E": 2.245696943119671
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 2.6142650175907276,
+        "M1": 3.0098708834672276,
+        "M2": 4.987765637992513,
+        "E": 2.245696943119671
+      },
+      "field_energy_log10_rmse": 2.9146664404232636,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 2.0461212732324983,
+        "phase_mae_radians": 1.6091985011894894
+      },
+      "mass_max_relative_drift": 3.541819747964088e-06,
+      "momentum_max_absolute_drift": 1.8204445940826856e-08,
+      "total_energy_max_relative_drift": 0.33263303221705964,
+      "minimum_density": 0.8850346207618713,
+      "minimum_pressure": 0.7622392313751207,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p500_a0p140",
+      "K": 0.5,
+      "alpha": 0.14,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90009797478986,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.10462552272922997,
+      "state_perturbation_relative_l2": 2.178851676130916,
+      "channel_relative_l2": {
+        "M0": 0.013775395242860504,
+        "M1": 0.9556712177388196,
+        "M2": 0.14066083051003145,
+        "E": 0.7681830711286487
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 1.087834272453849,
+        "M1": 0.9556712177388196,
+        "M2": 2.6389691761558316,
+        "E": 0.7681830711286487
+      },
+      "field_energy_log10_rmse": 1.6839193607998577,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.5821056509093296,
+        "phase_mae_radians": 1.1435792873890407
+      },
+      "mass_max_relative_drift": 3.959052253628935e-06,
+      "momentum_max_absolute_drift": 3.516925061864776e-08,
+      "total_energy_max_relative_drift": 0.18417068258967798,
+      "minimum_density": 0.860042154788971,
+      "minimum_pressure": 0.7067335684769669,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p500_a0p030",
+      "K": 0.5,
+      "alpha": 0.03,
+      "regime": "weak",
+      "completed_time": 79.90088587427243,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.13662433149568498,
+      "state_perturbation_relative_l2": 15.406989485115854,
+      "channel_relative_l2": {
+        "M0": 0.023511490241421917,
+        "M1": 10.61718564181066,
+        "M2": 0.1737123180650287,
+        "E": 7.42982048016857
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 8.60965458095584,
+        "M1": 10.61718564181066,
+        "M2": 19.876387165111396,
+        "E": 7.42982048016857
+      },
+      "field_energy_log10_rmse": 6.019190170799725,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 7.142766485619239,
+        "phase_mae_radians": 1.166512520665459
+      },
+      "mass_max_relative_drift": 4.912726576521316e-06,
+      "momentum_max_absolute_drift": 1.7944330468562385e-08,
+      "total_energy_max_relative_drift": 0.23041621412772925,
+      "minimum_density": 0.9454577565193176,
+      "minimum_pressure": 0.6665989768477558,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p280_a0p115",
+      "K": 0.28,
+      "alpha": 0.115,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90111405054837,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.05039891659171763,
+      "state_perturbation_relative_l2": 0.283269132059707,
+      "channel_relative_l2": {
+        "M0": 0.010982860821862174,
+        "M1": 0.2842059281579595,
+        "M2": 0.04118440465832539,
+        "E": 0.28060936967877437
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.2823524285636391,
+        "M1": 0.2842059281579595,
+        "M2": 0.2844749119012464,
+        "E": 0.28060936967877437
+      },
+      "field_energy_log10_rmse": 0.32455267360179163,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.12526661871890118,
+        "phase_mae_radians": 0.3190195201668493
+      },
+      "mass_max_relative_drift": 2.042856065516494e-06,
+      "momentum_max_absolute_drift": 7.04421836338663e-08,
+      "total_energy_max_relative_drift": 0.008593007522307804,
+      "minimum_density": 0.8850346207618713,
+      "minimum_pressure": 0.668619018394534,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p280_a0p158",
+      "K": 0.28,
+      "alpha": 0.158,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90112966670708,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.2542211063934154,
+      "state_perturbation_relative_l2": 1.06500223995778,
+      "channel_relative_l2": {
+        "M0": 0.05767539988109035,
+        "M1": 1.1328933267986239,
+        "M2": 0.19829460002750232,
+        "E": 1.0938864594797992
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 1.0979683194258412,
+        "M1": 1.1328933267986239,
+        "M2": 0.9814691745724106,
+        "E": 1.0938864594797992
+      },
+      "field_energy_log10_rmse": 0.7592966687524395,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.5077577797546894,
+        "phase_mae_radians": 0.7814327701336318
+      },
+      "mass_max_relative_drift": 1.5478581190109253e-06,
+      "momentum_max_absolute_drift": 7.17409420884511e-08,
+      "total_energy_max_relative_drift": 0.16978455635904705,
+      "minimum_density": 0.8420475721359253,
+      "minimum_pressure": 0.579398507205993,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p280_a0p200",
+      "K": 0.28,
+      "alpha": 0.2,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90088309791692,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.377051521346304,
+      "state_perturbation_relative_l2": 1.276594001740013,
+      "channel_relative_l2": {
+        "M0": 0.09193403040793294,
+        "M1": 1.4238816338004932,
+        "M2": 0.28110175607705035,
+        "E": 1.4138544926985317
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 1.4125365905824647,
+        "M1": 1.4238816338004932,
+        "M2": 1.0752160398987096,
+        "E": 1.4138544926985317
+      },
+      "field_energy_log10_rmse": 0.7761841751910982,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.545784645071522,
+        "phase_mae_radians": 1.3195650350674248
+      },
+      "mass_max_relative_drift": 2.7040950853225026e-06,
+      "momentum_max_absolute_drift": 1.6178091782662517e-08,
+      "total_energy_max_relative_drift": 0.13948846361335307,
+      "minimum_density": 0.8000602126121521,
+      "minimum_pressure": 0.5075224244250035,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p335_a0p030",
+      "K": 0.335,
+      "alpha": 0.03,
+      "regime": "transition",
+      "completed_time": 79.90121936809756,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.0934120165399169,
+      "state_perturbation_relative_l2": 3.471912971623367,
+      "channel_relative_l2": {
+        "M0": 0.01510310558464179,
+        "M1": 1.9823490136851003,
+        "M2": 0.12063193006915651,
+        "E": 1.4255153658849433
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 2.3912309354692063,
+        "M1": 1.9823490136851003,
+        "M2": 5.0613759493992525,
+        "E": 1.4255153658849433
+      },
+      "field_energy_log10_rmse": 1.0149581131424852,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.7800760722648936,
+        "phase_mae_radians": 0.7667838601299141
+      },
+      "mass_max_relative_drift": 1.2470409262487284e-06,
+      "momentum_max_absolute_drift": 4.6260538512545524e-08,
+      "total_energy_max_relative_drift": 0.11866488290852291,
+      "minimum_density": 0.9387340545654297,
+      "minimum_pressure": 0.5634279403996851,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p390_a0p030",
+      "K": 0.39,
+      "alpha": 0.03,
+      "regime": "transition",
+      "completed_time": 79.90100820900457,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.10043881587959258,
+      "state_perturbation_relative_l2": 6.541158197949244,
+      "channel_relative_l2": {
+        "M0": 0.015929576184036547,
+        "M1": 3.617050598562155,
+        "M2": 0.13235027256425466,
+        "E": 2.201024592106443
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 4.094160309067054,
+        "M1": 3.617050598562155,
+        "M2": 9.063525720795996,
+        "E": 2.201024592106443
+      },
+      "field_energy_log10_rmse": 1.9132547475580775,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 1.3089403779504583,
+        "phase_mae_radians": 0.8842474383416006
+      },
+      "mass_max_relative_drift": 3.0118972035014097e-06,
+      "momentum_max_absolute_drift": 3.2930984169608984e-08,
+      "total_energy_max_relative_drift": 0.13175356541153516,
+      "minimum_density": 0.9399494528770447,
+      "minimum_pressure": 0.5894165704749458,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p391_a0p141",
+      "K": 0.391,
+      "alpha": 0.141,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90148568823984,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.08362232301150722,
+      "state_perturbation_relative_l2": 0.8272122269767876,
+      "channel_relative_l2": {
+        "M0": 0.01768675486001801,
+        "M1": 0.7677682297717635,
+        "M2": 0.09078292195811838,
+        "E": 0.7046899106713838
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.7192633599515619,
+        "M1": 0.7677682297717635,
+        "M2": 0.8960412057225087,
+        "E": 0.7046899106713838
+      },
+      "field_energy_log10_rmse": 0.6811564000117489,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.4528556704739698,
+        "phase_mae_radians": 0.6726465047817491
+      },
+      "mass_max_relative_drift": 2.9057264300941243e-06,
+      "momentum_max_absolute_drift": 4.778848962433956e-08,
+      "total_energy_max_relative_drift": 0.21937288496433954,
+      "minimum_density": 0.8590424656867981,
+      "minimum_pressure": 0.6619489811257394,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p377_a0p162",
+      "K": 0.377,
+      "alpha": 0.162,
+      "regime": "weak",
+      "completed_time": 79.90090099288032,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.1401535330096985,
+      "state_perturbation_relative_l2": 1.1002995247606124,
+      "channel_relative_l2": {
+        "M0": 0.02921323424750665,
+        "M1": 1.059927234822412,
+        "M2": 0.14878604339140902,
+        "E": 0.9582776574810219
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.9680280695072038,
+        "M1": 1.059927234822412,
+        "M2": 1.1663308957263872,
+        "E": 0.9582776574810219
+      },
+      "field_energy_log10_rmse": 0.8488140721370948,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.7267452405116287,
+        "phase_mae_radians": 0.6232558453109186
+      },
+      "mass_max_relative_drift": 2.806540568148566e-06,
+      "momentum_max_absolute_drift": 2.2035237638801545e-08,
+      "total_energy_max_relative_drift": 0.268253973356151,
+      "minimum_density": 0.8380488157272339,
+      "minimum_pressure": 0.6137490700120745,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p314_a0p053",
+      "K": 0.314,
+      "alpha": 0.053,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90024790184165,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.07521324790596344,
+      "state_perturbation_relative_l2": 1.1308216045716495,
+      "channel_relative_l2": {
+        "M0": 0.016346958367468467,
+        "M1": 1.0619771792866108,
+        "M2": 0.07027908400359206,
+        "E": 1.0529073148012997
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 1.0760653861695448,
+        "M1": 1.0619771792866108,
+        "M2": 1.2473054029181367,
+        "E": 1.0529073148012997
+      },
+      "field_energy_log10_rmse": 1.0229213917628583,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.8039174907719171,
+        "phase_mae_radians": 0.7432862021643254
+      },
+      "mass_max_relative_drift": 1.5161931444136745e-06,
+      "momentum_max_absolute_drift": 5.567744664947161e-08,
+      "total_energy_max_relative_drift": 0.07420712298815361,
+      "minimum_density": 0.9470159411430359,
+      "minimum_pressure": 0.6958311088740582,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p410_a0p160",
+      "K": 0.41,
+      "alpha": 0.16,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90141062959583,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.14195475919709138,
+      "state_perturbation_relative_l2": 1.369920975340232,
+      "channel_relative_l2": {
+        "M0": 0.020429780239140344,
+        "M1": 0.8928922928156885,
+        "M2": 0.17741152272860436,
+        "E": 0.8001234361871783
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.8123071894424407,
+        "M1": 0.8928922928156885,
+        "M2": 1.6513501474038366,
+        "E": 0.8001234361871783
+      },
+      "field_energy_log10_rmse": 0.7549170346582037,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.5184299422972157,
+        "phase_mae_radians": 0.6789013317671785
+      },
+      "mass_max_relative_drift": 2.6696361377586374e-06,
+      "momentum_max_absolute_drift": 2.4305336409871527e-08,
+      "total_energy_max_relative_drift": 0.40190387360269536,
+      "minimum_density": 0.8400481939315796,
+      "minimum_pressure": 0.6351922578808565,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p449_a0p055",
+      "K": 0.449,
+      "alpha": 0.055,
+      "regime": "transition",
+      "completed_time": 79.90125277002731,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.12463265916347618,
+      "state_perturbation_relative_l2": 6.10090375221342,
+      "channel_relative_l2": {
+        "M0": 0.021833975166783048,
+        "M1": 4.369731512347656,
+        "M2": 0.15594754755648219,
+        "E": 3.347422564692989
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 3.878765835507735,
+        "M1": 4.369731512347656,
+        "M2": 7.64174149420993,
+        "E": 3.347422564692989
+      },
+      "field_energy_log10_rmse": 2.9274974958439945,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 3.0965529292173093,
+        "phase_mae_radians": 1.4730127034374425
+      },
+      "mass_max_relative_drift": 2.2924505067409458e-06,
+      "momentum_max_absolute_drift": 3.4542608770125804e-08,
+      "total_energy_max_relative_drift": 0.24126602566443853,
+      "minimum_density": 0.9393346309661865,
+      "minimum_pressure": 0.7507488185320423,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p440_a0p107",
+      "K": 0.44,
+      "alpha": 0.107,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90124201900812,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.1842625259119506,
+      "state_perturbation_relative_l2": 3.6858015931295554,
+      "channel_relative_l2": {
+        "M0": 0.023254451606821748,
+        "M1": 2.0889058047288787,
+        "M2": 0.24032206356610614,
+        "E": 1.7533110513264667
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 1.797657889488351,
+        "M1": 2.0889058047288787,
+        "M2": 4.640864785520371,
+        "E": 1.7533110513264667
+      },
+      "field_energy_log10_rmse": 1.3337241049580681,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 1.187324811348139,
+        "phase_mae_radians": 1.3620416198808025
+      },
+      "mass_max_relative_drift": 3.243796494154482e-06,
+      "momentum_max_absolute_drift": 3.368040780785205e-08,
+      "total_energy_max_relative_drift": 0.3917745605029658,
+      "minimum_density": 0.8930322527885437,
+      "minimum_pressure": 0.7533313061001196,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p459_a0p149",
+      "K": 0.459,
+      "alpha": 0.149,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90090051967869,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.21822393403080592,
+      "state_perturbation_relative_l2": 3.1831581317572186,
+      "channel_relative_l2": {
+        "M0": 0.03055867063870851,
+        "M1": 2.0560610058615527,
+        "M2": 0.2790553649716585,
+        "E": 1.7606021595822958
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 1.7677259762785964,
+        "M1": 2.0560610058615527,
+        "M2": 3.76052404022069,
+        "E": 1.7606021595822958
+      },
+      "field_energy_log10_rmse": 1.3288202440106174,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 1.1982365035118687,
+        "phase_mae_radians": 1.4310659207761263
+      },
+      "mass_max_relative_drift": 1.946464173695206e-06,
+      "momentum_max_absolute_drift": 2.4239852784534747e-08,
+      "total_energy_max_relative_drift": 0.4424104926727863,
+      "minimum_density": 0.8510448932647705,
+      "minimum_pressure": 0.6812413269329863,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p497_a0p060",
+      "K": 0.497,
+      "alpha": 0.06,
+      "regime": "weak",
+      "completed_time": 79.90020283584388,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.10291720893194506,
+      "state_perturbation_relative_l2": 5.6087116152603,
+      "channel_relative_l2": {
+        "M0": 0.019544118575468086,
+        "M1": 3.903412526121111,
+        "M2": 0.13152268207892054,
+        "E": 2.4146625892584725
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 3.5684822565903467,
+        "M1": 3.903412526121111,
+        "M2": 7.0837090968441245,
+        "E": 2.4146625892584725
+      },
+      "field_energy_log10_rmse": 4.125455316868263,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 2.0295505584690074,
+        "phase_mae_radians": 1.363860531521281
+      },
+      "mass_max_relative_drift": 3.4929253095892718e-06,
+      "momentum_max_absolute_drift": 4.563116817583557e-08,
+      "total_energy_max_relative_drift": 0.13023830488166654,
+      "minimum_density": 0.9400180578231812,
+      "minimum_pressure": 0.6833681995414758,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p338_a0p128",
+      "K": 0.338,
+      "alpha": 0.128,
+      "regime": "weak",
+      "completed_time": 79.9015533606031,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.13268668108448267,
+      "state_perturbation_relative_l2": 1.0239612104483726,
+      "channel_relative_l2": {
+        "M0": 0.026710947388021405,
+        "M1": 0.9176223455483457,
+        "M2": 0.13827907872648407,
+        "E": 0.8716043915910965
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.8775562810791235,
+        "M1": 0.9176223455483457,
+        "M2": 1.162132497596306,
+        "E": 0.8716043915910965
+      },
+      "field_energy_log10_rmse": 0.7165955529765189,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.5779796870720212,
+        "phase_mae_radians": 0.5884793442471582
+      },
+      "mass_max_relative_drift": 2.2463500646170698e-06,
+      "momentum_max_absolute_drift": 5.135007086026177e-08,
+      "total_energy_max_relative_drift": 0.2590500715967079,
+      "minimum_density": 0.8720385432243347,
+      "minimum_pressure": 0.6631788613458985,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p371_a0p141",
+      "K": 0.371,
+      "alpha": 0.141,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90086513674743,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.05816952107656046,
+      "state_perturbation_relative_l2": 0.5080804950630136,
+      "channel_relative_l2": {
+        "M0": 0.015151652715136825,
+        "M1": 0.5493142084800297,
+        "M2": 0.052144304918046704,
+        "E": 0.5457338275220067
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.553000815191154,
+        "M1": 0.5493142084800297,
+        "M2": 0.46591925037470466,
+        "E": 0.5457338275220067
+      },
+      "field_energy_log10_rmse": 0.8379201189211933,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.4953460403028783,
+        "phase_mae_radians": 0.5372136763064376
+      },
+      "mass_max_relative_drift": 2.040527759082124e-06,
+      "momentum_max_absolute_drift": 3.5406628754484216e-08,
+      "total_energy_max_relative_drift": 0.010357213381504634,
+      "minimum_density": 0.8590424656867981,
+      "minimum_pressure": 0.6515608362336207,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p316_a0p153",
+      "K": 0.316,
+      "alpha": 0.153,
+      "regime": "transition",
+      "completed_time": 79.90094537382343,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.06376518070792171,
+      "state_perturbation_relative_l2": 0.35156351010953835,
+      "channel_relative_l2": {
+        "M0": 0.0129872122005503,
+        "M1": 0.3162586900180252,
+        "M2": 0.06506667714177097,
+        "E": 0.3014979579850516
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.3118378803446554,
+        "M1": 0.3162586900180252,
+        "M2": 0.3981983174664118,
+        "E": 0.3014979579850516
+      },
+      "field_energy_log10_rmse": 0.35915690159641245,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.187165000125856,
+        "phase_mae_radians": 0.25086307683813286
+      },
+      "mass_max_relative_drift": 1.1776573977948304e-06,
+      "momentum_max_absolute_drift": 3.703826222739374e-08,
+      "total_energy_max_relative_drift": 0.08755308829865482,
+      "minimum_density": 0.8470460772514343,
+      "minimum_pressure": 0.6020285407053585,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p400_a0p084",
+      "K": 0.4,
+      "alpha": 0.084,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90012097902512,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.1800834782155114,
+      "state_perturbation_relative_l2": 3.4699497484683355,
+      "channel_relative_l2": {
+        "M0": 0.029369942135061215,
+        "M1": 2.500174688117129,
+        "M2": 0.21945530591191711,
+        "E": 2.210755480746718
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 2.239714372303768,
+        "M1": 2.500174688117129,
+        "M2": 4.337787282795255,
+        "E": 2.210755480746718
+      },
+      "field_energy_log10_rmse": 1.1703718202536297,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 1.4030065391085644,
+        "phase_mae_radians": 1.3069459735855533
+      },
+      "mass_max_relative_drift": 2.744607622279585e-06,
+      "momentum_max_absolute_drift": 5.6428689267421515e-08,
+      "total_energy_max_relative_drift": 0.3379206715328738,
+      "minimum_density": 0.9160252809524536,
+      "minimum_pressure": 0.7857184864860096,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p371_a0p113",
+      "K": 0.371,
+      "alpha": 0.113,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90147618456137,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.10538453822397523,
+      "state_perturbation_relative_l2": 1.1521016565484998,
+      "channel_relative_l2": {
+        "M0": 0.02219120350619953,
+        "M1": 0.9653893859165955,
+        "M2": 0.11877202440053414,
+        "E": 0.8562758999711688
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.9981323730143791,
+        "M1": 0.9653893859165955,
+        "M2": 1.358094288382177,
+        "E": 0.8562758999711688
+      },
+      "field_energy_log10_rmse": 0.681091520537602,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.5361506514825122,
+        "phase_mae_radians": 1.141953713156693
+      },
+      "mass_max_relative_drift": 4.071742300010978e-06,
+      "momentum_max_absolute_drift": 1.8518221588240405e-08,
+      "total_energy_max_relative_drift": 0.11927348472383657,
+      "minimum_density": 0.8870340585708618,
+      "minimum_pressure": 0.640497538547909,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p472_a0p082",
+      "K": 0.472,
+      "alpha": 0.082,
+      "regime": "transition",
+      "completed_time": 79.90105025081888,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.1433128350704055,
+      "state_perturbation_relative_l2": 5.050419237030607,
+      "channel_relative_l2": {
+        "M0": 0.027130792576582352,
+        "M1": 3.789545567055933,
+        "M2": 0.17869359263853613,
+        "E": 2.841131626150274
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 3.443615053236805,
+        "M1": 3.789545567055933,
+        "M2": 6.083570847754897,
+        "E": 2.841131626150274
+      },
+      "field_energy_log10_rmse": 2.887487438065042,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 2.5339092054123165,
+        "phase_mae_radians": 1.5769997401932117
+      },
+      "mass_max_relative_drift": 4.317145774526774e-06,
+      "momentum_max_absolute_drift": 1.1325028036892291e-08,
+      "total_energy_max_relative_drift": 0.22196882667026985,
+      "minimum_density": 0.9180247187614441,
+      "minimum_pressure": 0.7454508450406648,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    },
+    {
+      "case_id": "K0p327_a0p097",
+      "K": 0.327,
+      "alpha": 0.097,
+      "regime": "strong_nonlinear",
+      "completed_time": 79.90090241249287,
+      "finite_to_final_time": true,
+      "valid_frame_count": 800,
+      "state_relative_l2": 0.07052117846177236,
+      "state_perturbation_relative_l2": 0.6504998624142131,
+      "channel_relative_l2": {
+        "M0": 0.0133298549686548,
+        "M1": 0.5487590635216235,
+        "M2": 0.07616282655610863,
+        "E": 0.5024971412041233
+      },
+      "channel_perturbation_relative_l2": {
+        "M0": 0.5267404069585386,
+        "M1": 0.5487590635216235,
+        "M2": 0.7977105407497636,
+        "E": 0.5024971412041233
+      },
+      "field_energy_log10_rmse": 0.5643520887809069,
+      "electric_mode_one": {
+        "amplitude_relative_l2": 0.2814353925389698,
+        "phase_mae_radians": 0.4582083671635363
+      },
+      "mass_max_relative_drift": 3.512948751449585e-06,
+      "momentum_max_absolute_drift": 3.1718627732268484e-08,
+      "total_energy_max_relative_drift": 0.09938633249250343,
+      "minimum_density": 0.903029203414917,
+      "minimum_pressure": 0.7272466361485569,
+      "density_violation_count": 0,
+      "pressure_violation_count": 0
+    }
+  ]
+}

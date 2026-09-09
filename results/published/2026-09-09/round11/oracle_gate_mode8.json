@@ -1,0 +1,83 @@
+{
+  "stage": "round11_formal_oracle_gate",
+  "passed": false,
+  "selected_maximum_mode": 8,
+  "selected_dt": 0.02,
+  "limits": {
+    "max_log_energy": 0.05,
+    "max_perturbation_relative_l2": 0.005,
+    "max_energy_drift": 0.001
+  },
+  "runs": [
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_mode8_fp32/mode8_dt0.02/summary.json",
+      "dtype": "fp32",
+      "complete": 9,
+      "median_log_energy": 0.0016570064472034574,
+      "max_log_energy": 0.01141088455915451,
+      "max_perturbation_relative_l2": 0.0008353751968626494,
+      "max_energy_drift": 3.9392184973776515e-05,
+      "max_gradient_tail_fraction": 0.22444429993629456
+    },
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_mode8_fp64/mode8_dt0.02/summary.json",
+      "dtype": "fp64",
+      "complete": 9,
+      "median_log_energy": 0.004352667286511127,
+      "max_log_energy": 0.021699569644502533,
+      "max_perturbation_relative_l2": 0.0008152327831421187,
+      "max_energy_drift": 4.067495035418511e-08,
+      "max_gradient_tail_fraction": 0.22444429993629456
+    }
+  ],
+  "test_used": false,
+  "unfiltered_reference_checks": [
+    {
+      "case_id": "K0p445_a0p030",
+      "filtered_reference_perturbation_relative_error": 5.264516361778946e-06,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.00015964626262132472
+    },
+    {
+      "case_id": "K0p474_a0p051",
+      "filtered_reference_perturbation_relative_error": 1.0894664899344957e-05,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.00016112955569526948
+    },
+    {
+      "case_id": "K0p303_a0p035",
+      "filtered_reference_perturbation_relative_error": 0.002973909626981343,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0029799161350439122
+    },
+    {
+      "case_id": "K0p412_a0p043",
+      "filtered_reference_perturbation_relative_error": 0.00040570382321354636,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0004283437612220034
+    },
+    {
+      "case_id": "K0p280_a0p137",
+      "filtered_reference_perturbation_relative_error": 0.013572754998247892,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.013580969973028779
+    },
+    {
+      "case_id": "K0p500_a0p165",
+      "filtered_reference_perturbation_relative_error": 0.007149757601626246,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.00715245207593844
+    },
+    {
+      "case_id": "K0p280_a0p073",
+      "filtered_reference_perturbation_relative_error": 0.005213032158081989,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.005217951458657278
+    },
+    {
+      "case_id": "K0p500_a0p158",
+      "filtered_reference_perturbation_relative_error": 0.002543463123043155,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.002547519243651669
+    },
+    {
+      "case_id": "K0p401_a0p132",
+      "filtered_reference_perturbation_relative_error": 0.026317954214887918,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.026331200893789743
+    }
+  ],
+  "full_reference_limit": 0.01,
+  "interpretation": "The initial bandlimited oracle criterion passes, but the added complete-moment reference criterion fails (maximum perturbation error 2.63%). Retain this numerical rejection; do not use mode 8 as the formal accuracy setting."
+}

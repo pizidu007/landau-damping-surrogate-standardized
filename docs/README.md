@@ -1,5 +1,11 @@
 # 文档索引
 
+## 公开结果与模型
+
+- [关键结果与看图指南](results/KEY_RESULTS_zh-CN.md)：按阶段阅读图表、指标和结论边界。
+- [checkpoint 下载与使用](results/CHECKPOINTS_zh-CN.md)：16 个发布模型的用途、按需下载、哈希校验、CPU 入门与共享服务器重评估。
+- [2026-09-09 结果快照](../results/published/2026-09-09/README.md)：可直接浏览的原图、PDF、JSON、CSV 和来源清单。
+
 ## 新成员先读
 
 从[新成员学习路线](onboarding/README.md)开始。该入口提供阅读顺序、贯穿示例、CPU 入门练习和第一项任务的交付标准。

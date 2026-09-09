@@ -1,0 +1,79 @@
+{
+  "stage": "round10_sealed_test_strong_nonlinear_visualization",
+  "generated_at": "2026-09-03T21:11:54.324524+08:00",
+  "split": "test",
+  "test_opened_after_validation_selection": true,
+  "selection": {
+    "fno_single": 1,
+    "fno_history4": 2,
+    "unet_history4": 1
+  },
+  "case_count": 26,
+  "case_ids": [
+    "K0p280_a0p035",
+    "K0p280_a0p115",
+    "K0p280_a0p158",
+    "K0p280_a0p200",
+    "K0p292_a0p060",
+    "K0p303_a0p085",
+    "K0p314_a0p053",
+    "K0p326_a0p072",
+    "K0p327_a0p097",
+    "K0p338_a0p085",
+    "K0p349_a0p060",
+    "K0p371_a0p113",
+    "K0p371_a0p141",
+    "K0p384_a0p064",
+    "K0p391_a0p141",
+    "K0p400_a0p084",
+    "K0p410_a0p160",
+    "K0p431_a0p066",
+    "K0p431_a0p091",
+    "K0p440_a0p107",
+    "K0p442_a0p075",
+    "K0p454_a0p088",
+    "K0p459_a0p149",
+    "K0p465_a0p105",
+    "K0p488_a0p128",
+    "K0p500_a0p140"
+  ],
+  "outputs": {
+    "individual_case_png": [
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p280_a0p035.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p280_a0p115.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p280_a0p158.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p280_a0p200.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p292_a0p060.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p303_a0p085.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p314_a0p053.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p326_a0p072.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p327_a0p097.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p338_a0p085.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p349_a0p060.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p371_a0p113.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p371_a0p141.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p384_a0p064.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p391_a0p141.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p400_a0p084.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p410_a0p160.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p431_a0p066.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p431_a0p091.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p440_a0p107.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p442_a0p075.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p454_a0p088.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p459_a0p149.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p465_a0p105.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p488_a0p128.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/cases/K0p500_a0p140.png"
+    ],
+    "field_energy_atlas": [
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/strong_nonlinear_field_energy_atlas.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/strong_nonlinear_field_energy_atlas.pdf"
+    ],
+    "error_matrix": [
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/strong_nonlinear_error_matrix.png",
+      "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/strong_nonlinear_error_matrix.pdf"
+    ],
+    "metrics_csv": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_macrostep_round10/formal/figures/test_strong_nonlinear/strong_nonlinear_metrics.csv"
+  }
+}

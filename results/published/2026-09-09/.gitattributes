@@ -1,0 +1,4 @@
+# Preserve frozen artifact bytes when cloning with core.autocrlf enabled.
+* -text
+# Generated vector figures are reviewed visually; omit large path-data diffs.
+*.svg -diff

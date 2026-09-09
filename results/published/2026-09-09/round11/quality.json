@@ -1,0 +1,15 @@
+{
+  "purpose": "Provisional engineering acceptance gate, frozen before B/C pilot and formal results; these tolerances are not universal physical criteria.",
+  "split": "validation",
+  "required_completed_fraction": 1.0,
+  "maximum_total_energy_relative_drift": 0.001,
+  "maximum_mass_absolute_drift": 0.0001,
+  "maximum_momentum_absolute_drift": 0.0001,
+  "maximum_median_late_field_log10_rmse": 0.3,
+  "maximum_median_late_electric_mode1_phase_mae": 0.35,
+  "maximum_median_late_perturbation_relative_l2": 0.25,
+  "maximum_regime_median_late_field_log10_rmse": 0.5,
+  "late_time_interval": [30.0, 80.0],
+  "required_formal_seeds": [0, 1, 2],
+  "test_used_for_thresholds": false
+}

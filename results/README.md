@@ -1,5 +1,6 @@
 # 结果目录
 
+- `published/2026-09-09/`：已进入 Git 的精选图表与指标；从[看图指南](../docs/results/KEY_RESULTS_zh-CN.md)开始。
 - `smoke/`：从原项目保留的已验证推理样例，不应被新运行覆盖。
 - `runs/<run_id>/`：新训练、评估或推理产生的结果。
 

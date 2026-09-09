@@ -1,0 +1,253 @@
+{
+  "stage": "round11_oracle_gate",
+  "passed": true,
+  "test_used": false,
+  "selected_maximum_mode": 16,
+  "selected_dt": 0.02,
+  "limits": {
+    "max_log_energy": 0.05,
+    "max_perturbation_relative_l2": 0.005,
+    "max_energy_drift": 0.001
+  },
+  "runs": [
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle/mode16_dt0.002/summary.json",
+      "mode": 16,
+      "dt": 0.002,
+      "dtype": "torch.float32",
+      "complete": 9,
+      "median_log_energy": 0.02063799649477005,
+      "max_log_energy": 0.14121457934379578,
+      "max_perturbation_relative_l2": 0.0030850332035072233,
+      "max_energy_drift": 0.00042128344848982075,
+      "max_gradient_tail_fraction": 0.031465429812669754
+    },
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle/mode24_dt0.002/summary.json",
+      "mode": 24,
+      "dt": 0.002,
+      "dtype": "torch.float32",
+      "complete": 9,
+      "median_log_energy": 0.020652420818805695,
+      "max_log_energy": 0.14264610409736633,
+      "max_perturbation_relative_l2": 0.0034684900153951394,
+      "max_energy_drift": 0.00043331403471154166,
+      "max_gradient_tail_fraction": 0.005825037136673927
+    },
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle/mode8_dt0.002/summary.json",
+      "mode": 8,
+      "dt": 0.002,
+      "dtype": "torch.float32",
+      "complete": 9,
+      "median_log_energy": 0.02088545635342598,
+      "max_log_energy": 0.1392836719751358,
+      "max_perturbation_relative_l2": 0.003029084628189267,
+      "max_energy_drift": 0.0004504549584433742,
+      "max_gradient_tail_fraction": 0.22444429993629456
+    },
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_dt/mode16_dt0.005/summary.json",
+      "mode": 16,
+      "dt": 0.005,
+      "dtype": "torch.float32",
+      "complete": 9,
+      "median_log_energy": 0.00568667147308588,
+      "max_log_energy": 0.048757605254650116,
+      "max_perturbation_relative_l2": 0.000953292402614793,
+      "max_energy_drift": 0.0001730062177902347,
+      "max_gradient_tail_fraction": 0.031465429812669754
+    },
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_dt/mode16_dt0.01/summary.json",
+      "mode": 16,
+      "dt": 0.01,
+      "dtype": "torch.float32",
+      "complete": 9,
+      "median_log_energy": 0.001740438281558454,
+      "max_log_energy": 0.018594633787870407,
+      "max_perturbation_relative_l2": 0.0006241509817928778,
+      "max_energy_drift": 7.952962750111097e-05,
+      "max_gradient_tail_fraction": 0.031465429812669754
+    },
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_dt/mode16_dt0.02/summary.json",
+      "mode": 16,
+      "dt": 0.02,
+      "dtype": "torch.float32",
+      "complete": 9,
+      "median_log_energy": 0.0015462860465049744,
+      "max_log_energy": 0.01164997462183237,
+      "max_perturbation_relative_l2": 0.0002710000406700417,
+      "max_energy_drift": 4.4289591754300084e-05,
+      "max_gradient_tail_fraction": 0.031465429812669754
+    },
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_fp64/mode16_dt0.002/summary.json",
+      "mode": 16,
+      "dt": 0.002,
+      "dtype": "torch.float64",
+      "complete": 9,
+      "median_log_energy": 0.0041376513941848905,
+      "max_log_energy": 0.02051971228894314,
+      "max_perturbation_relative_l2": 0.0002371871811353246,
+      "max_energy_drift": 6.842223418030669e-09,
+      "max_gradient_tail_fraction": 0.031465429812669754
+    },
+    {
+      "path": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_fp64/mode16_dt0.02/summary.json",
+      "mode": 16,
+      "dt": 0.02,
+      "dtype": "torch.float64",
+      "complete": 9,
+      "median_log_energy": 0.004354607952719239,
+      "max_log_energy": 0.02167691903159269,
+      "max_perturbation_relative_l2": 0.0002512408975443762,
+      "max_energy_drift": 5.301126905016769e-09,
+      "max_gradient_tail_fraction": 0.031465429812669754
+    }
+  ],
+  "interpretation": "Float64 runs nearly agree at dt 0.002/0.02. Much larger float32 error at dt 0.002 is consistent with accumulated roundoff. Oracle validity does not establish stability of a learned closure at dt 0.02.",
+  "scope": "9 preselected train/validation cases, full t=0..80, no clipping",
+  "unfiltered_reference_checks": [
+    {
+      "case_id": "K0p445_a0p030",
+      "filtered_reference_perturbation_relative_error": 3.29210837697532e-06,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0002038994501184104
+    },
+    {
+      "case_id": "K0p474_a0p051",
+      "filtered_reference_perturbation_relative_error": 2.359071532064745e-06,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0002101882296358513
+    },
+    {
+      "case_id": "K0p303_a0p035",
+      "filtered_reference_perturbation_relative_error": 0.00019489080584468043,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0002729702117057433
+    },
+    {
+      "case_id": "K0p412_a0p043",
+      "filtered_reference_perturbation_relative_error": 2.2405956055656387e-06,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.000140914896810743
+    },
+    {
+      "case_id": "K0p280_a0p137",
+      "filtered_reference_perturbation_relative_error": 0.0027550843655325128,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0027659041627561692
+    },
+    {
+      "case_id": "K0p500_a0p165",
+      "filtered_reference_perturbation_relative_error": 0.0003595668034086586,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0003961751934704327
+    },
+    {
+      "case_id": "K0p280_a0p073",
+      "filtered_reference_perturbation_relative_error": 0.0006350235833544811,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0006672115364463791
+    },
+    {
+      "case_id": "K0p500_a0p158",
+      "filtered_reference_perturbation_relative_error": 6.344819182406635e-05,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.00015458300678224506
+    },
+    {
+      "case_id": "K0p401_a0p132",
+      "filtered_reference_perturbation_relative_error": 0.003031563308301411,
+      "oracle_vs_unfiltered_perturbation_relative_error": 0.0030436552118001912
+    }
+  ],
+  "full_reference_limit": 0.01,
+  "all_validation_check": {
+    "summary": {
+      "complete": 20,
+      "case_count": 20,
+      "max_log_energy": 0.016435673460364342,
+      "max_filtered_perturbation_error": 0.00046873989477959333,
+      "max_unfiltered_perturbation_error": 0.00811707727840658,
+      "max_total_energy_drift": 5.234140554121014e-05
+    },
+    "cases": [
+      {
+        "case_id": "K0p280_a0p085",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0009089232108256088
+      },
+      {
+        "case_id": "K0p303_a0p035",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0002745988672006875
+      },
+      {
+        "case_id": "K0p361_a0p035",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.00016564290536931768
+      },
+      {
+        "case_id": "K0p407_a0p105",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0015996341553224042
+      },
+      {
+        "case_id": "K0p454_a0p125",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0012980421020798848
+      },
+      {
+        "case_id": "K0p500_a0p165",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0003975655185984067
+      },
+      {
+        "case_id": "K0p445_a0p030",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0002288223964797945
+      },
+      {
+        "case_id": "K0p420_a0p122",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0020127073894154763
+      },
+      {
+        "case_id": "K0p372_a0p085",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0013131005552690135
+      },
+      {
+        "case_id": "K0p368_a0p186",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.005835346659356333
+      },
+      {
+        "case_id": "K0p472_a0p032",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0002909647072189357
+      },
+      {
+        "case_id": "K0p460_a0p177",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.002588609181018225
+      },
+      {
+        "case_id": "K0p280_a0p137",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.0027656944602239175
+      },
+      {
+        "case_id": "K0p342_a0p167",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.00557950725158002
+      },
+      {
+        "case_id": "K0p474_a0p051",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.00015447416134366836
+      },
+      {
+        "case_id": "K0p295_a0p178",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.007490497687043072
+      },
+      {
+        "case_id": "K0p299_a0p105",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.001961453192689096
+      },
+      {
+        "case_id": "K0p321_a0p185",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.00811707727840658
+      },
+      {
+        "case_id": "K0p412_a0p043",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.00020444387956752996
+      },
+      {
+        "case_id": "K0p409_a0p182",
+        "oracle_vs_unfiltered_perturbation_relative_error": 0.005347580025032084
+      }
+    ],
+    "source": "/wangx/home/duxinxu/projects/landau-damping-surrogate-standardized/results/continuum_v1_closure_round11/oracle_all_validation/mode16_dt0.02/summary.json"
+  }
+}

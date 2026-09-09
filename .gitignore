@@ -25,8 +25,8 @@ Thumbs.db
 *.key
 configs/paths.local.toml
 
-# Scientific data and checkpoints stay on the shared server, including
-# assets written outside data/ or models/ by historical experiments.
+# Scientific data and checkpoints stay outside Git, including Release downloads
+# and assets written outside data/ or models/ by historical experiments.
 *.h5
 *.hdf5
 *.npz
@@ -59,6 +59,11 @@ configs/paths.local.toml
 /results/closure_fno_v1/final_report/*
 !/results/closure_fno_v1/final_report/REPORT.md
 !/results/closure_fno_v1/final_report/study_summary.json
+# Reviewed publication snapshots: figures, reports and small metric tables.
+# Checkpoints and array files remain excluded by the global patterns above.
+!/results/published/
+/results/published/*
+!/results/published/2026-09-09/
 /logs/*
 !/logs/README.md
 *.log
